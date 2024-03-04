@@ -11,11 +11,6 @@ app.use(express.json());
 
 app.get("/", (req, res) => {
   const htmlFilePath = path.join(pathh, "index.html");
-  const stylecss = path.join(pathh, "style.css");
-  const scriptjs = path.join(pathh, "script.js");
-
-  res.sendFile(scriptjs);
-  res.sendFile(stylecss);
   res.sendFile(htmlFilePath);
 });
 
