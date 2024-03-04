@@ -1,3 +1,4 @@
+// PARA QUE O SITE FUNCIONE COM TODAS AS DEPENDÊNCIAS
 
 const express = require("express");
 const path = require("path");
@@ -10,7 +11,11 @@ app.use(express.json());
 
 app.get("/", (req, res) => {
   const htmlFilePath = path.join(pathh, "index.html");
+  const stylecss = path.join(pathh, "style.css");
+  const scriptjs = path.join(pathh, "script.js");
 
+  res.sendFile(scriptjs);
+  res.sendFile(stylecss);
   res.sendFile(htmlFilePath);
 });
 
