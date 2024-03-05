@@ -201,7 +201,9 @@
   .table-estimated-of {
     display: none;
   }
-  
+  .aviso {
+    display: none;
+  }
   .infos {
   display: flex;
   justify-content: center;
@@ -501,6 +503,12 @@
   
   /*Formulários*/
   
+  .aviso {
+    color: gray;
+    font-size: 8px;
+    text-align: right;
+    padding: 0 120px;
+  }
   .square {
     flex: 1 0 90%;
     margin: 1%;
@@ -594,7 +602,7 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding: 5px 24px;
+    padding: 5px 27px;
   }
   
   .empresa .col-3 {
