@@ -1,17 +1,4 @@
 /*Peso Estimado*/
-const express = require("express");
-const path = require("path");
-
-const app = express();
-const pathh = path.join(__dirname, "");
-
-app.use(express.static(pathh));
-app.use(express.json());
-
-app.get("/", (req, res) => {
-  const serverFilePath = path.join(pathh, "server.js");
-  res.sendFile(serverFilePath);
-});
 
 document
   .getElementById("estimated-weight-form")
