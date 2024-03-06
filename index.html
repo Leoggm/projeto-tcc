@@ -194,9 +194,9 @@
         <h2>IMC</h2>
         <form id="age-height">
           <b><label for="age">Peso:</label><br /></b>
-          <input type="number" id="age" name="age" min="0" max="200" required/><br />
+          <input type="number" id="age" name="age" min="0" max="500"  oninvalid="this.setCustomValidity('Tente usar um número maior que 0, sem ponto ou vírgula. Se preciso, arredonde.')" required/><br />
           <b> <label for="height">Altura:</label><br /></b>
-          <input type="number" id="height" name="height" min="0" max="200" required/><br />
+          <input type="number" id="height" name="height" min="0" max="500" oninvalid="this.setCustomValidity('Tente usar um número maior que 0, sem ponto ou vírgula. Se preciso, arredonde.')" required/><br />
           <header class="header2">
             <div class="lgpd">
               <button type="submit" id="open-age-height" class="btn-popup">Calcular &#10140;</button>
@@ -350,11 +350,11 @@ CB = Circunferência do braço em cm</p>
             <option value="Branco(a)">Branco(a)</option>
             <option value="Negro(a)">Negro(a)</option></select><br />
           <b> <label for="idade">Idade:</label></b><br />
-          <input type="number" id="idade" name="idade" min="18" max="120"  required/><br />
+          <input type="number" id="idade" name="idade" min="18" max="500" oninvalid="this.setCustomValidity('Tente usar um número maior que 0, sem ponto ou vírgula. Se preciso, arredonde.')" required/><br />
           <b> <label for="aj">Altura do Joelho:</label></b> <br />
-          <input type="number" id="aj" name="aj"  min="0" max="120" required/><br />
+          <input type="number" id="aj" name="aj"  min="0" max="500" oninvalid="this.setCustomValidity('Tente usar um número maior que 0, sem ponto ou vírgula. Se preciso, arredonde.')" required/><br />
           <b> <label for="cb">Circunferência do Braço:</label></b> <br />
-          <input type="number" id="cb" name="cb" min="0" max="120" required/><br />
+          <input type="number" id="cb" name="cb" min="0" max="500" oninvalid="this.setCustomValidity('Tente usar um número maior que 0, sem ponto ou vírgula. Se preciso, arredonde.')" required/><br />
           <header class="header2">
             <div class="lgpd">
               <div id="tmb">
@@ -510,9 +510,9 @@ Extremamente ativo: TMB x 1.9
           <b> <label for="idad">Idade:</label></b> <br />
           <input type="number" id="idad" name="idad"  min="18" max="500" required/><br />
           <b> <label for="alt">Altura:</label></b> <br />
-          <input type="number" id="alt" name="alt"  min="0"  max="500" required/><br />
-          <b> <label for="pes">Peso:</label></b> <br />
-          <input  type="number" id="pes" name="pes"  min="0" max="500" required/><br />
+          <input type="number" id="alt" name="alt" min="0" max="500" oninvalid="this.setCustomValidity('Tente usar um número maior que 0, sem ponto ou vírgula. Se preciso, arredonde.')" required /><br>
+          <b> <label for="pes">Peso:</label></b>  <br />
+          <input  type="number" id="pes" name="pes"  min="0" max="500" oninvalid="this.setCustomValidity('Tente usar um número maior que 0, sem ponto ou vírgula. Se preciso, arredonde.')" required/><br />
           <b><label for="activity">Nível de Atividade: </label></b> <br />
           <select id="activity" name="activity">
             <option value="1.2">Sedentário</option>
