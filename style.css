@@ -239,6 +239,7 @@ min-height: 60vh;
 }
 .imc-table{
     border-spacing: 15px 3px;
+    align-content: center;
     border: 1px solid rgb(255, 0, 0);
     border-radius: 20px 20px 20px 20px;
     font-size: 12px;

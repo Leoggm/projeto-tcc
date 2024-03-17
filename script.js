@@ -43,36 +43,37 @@ document
 /*IMC*/
 
 document
-  .getElementById("age-height")
+  .getElementById("weight-height")
   .addEventListener("submit", async (event) => {
     event.preventDefault();
 
-    const age = document.getElementById("age").value;
+    const weight = document.getElementById("weight").value;
     const height = document.getElementById("height").value;
+    const gener = document.getElementById("gener").value;
+    const age = document.getElementById("age").value;
 
     try {
-      const response = await fetch("/api/age-height", {
+      const response = await fetch("/api/weight-height", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ age, height }),
+        body: JSON.stringify({ weight, height,age, gener }),
       });
 
       if (!response.ok) {
         throw new Error(
-          "Falha ao calcular a idade dividida pela altura ao quadrado"
+          "Falha ao calcular o peso dividida pela altura ao quadrado"
         );
       }
 
       const result = await response.json();
-      document.getElementById(
-        "age-height-result"
-      ).textContent = `Resultado: ${result.result} - (${result.classification})`;
+      document.getElementById("weight-height-result").textContent = `IMC: ${result.result} - (${result.classification})`;
+      document.getElementById("ideal-weight-result").textContent = `${result.ideal}`;
       console.log(result);
     } catch (error) {
       console.error(error);
-      document.getElementById("age-height-result").textContent =
+      document.getElementById("weight-height-result").textContent =
         "Um erro aconteceu ao calcular a idade dividida pela altura ao quadrado.";
     }
   });
@@ -234,11 +235,11 @@ openTmb.addEventListener("click", () => {
 closeTmb.addEventListener("click", () => {
   modalContainerTmb.classList.remove("show");
 });
-const openAgeHeight = document.getElementById("open-age-height");
+const openAgeHeight = document.getElementById("open-weight-height");
 const modalContainerAgeHeight = document.getElementById(
-  "modal_container_age-height"
+  "modal_container_weight-height"
 );
-const closeAgeHeight = document.getElementById("close-age-height");
+const closeAgeHeight = document.getElementById("close-weight-height");
 
 openAgeHeight.addEventListener("click", () => {
   modalContainerAgeHeight.classList.add("show");
