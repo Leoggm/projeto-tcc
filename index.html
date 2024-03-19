@@ -10,8 +10,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="TCC - Leo e Amanda" />
     <meta name="description" content="TCC sobre cálculos nutricionais, contendo calculadora de IMC, TMB e Peso Estimado." />
-    <meta property="og:image" content="https://media.discordapp.net/attachments/807085176038621184/1211333257778434118/pngegg.png?ex=65edd102&is=65db5c02&hm=ba90f81eba9a64cdfdf34f2b5647b23198667af36ddc49a43af2d9adfca8076a&=&format=webp&quality=lossless&width=468&height=468"/>
-    <link rel="icon" href="https://cdn.discordapp.com/attachments/1082683031774564435/1199123455556194314/pngegg.png?ex=65c165be&is=65aef0be&hm=126c41e31a2c98a70157431ddccab5efb4dd8dcdd3f9fb0c3380c64394c55e47&"/>
+    <meta property="og:image" content="https://cdn.glitch.global/6af1468b-cb11-4a91-ae86-6c41c33a11e0/pngegg.png?v=1709671873996"/>
+    <link rel="icon" href="https://cdn.glitch.global/6af1468b-cb11-4a91-ae86-6c41c33a11e0/pngegg.png?v=1709671873996"/>
     <title>TCC - Leo e Amanda</title>
     <link rel="stylesheet" href="style.css">
 
@@ -198,7 +198,7 @@
             <option value="Masculino">Masculino</option>
             <option value="Feminino">Feminino</option></select><br />
             <b><label for="age">Idade</label><br></b>
-            <input type="number" id="age" name="age" min="0" max="500" oninvalid="this.setCustomValidity('Tente usar um número maior que 0, sem ponto ou vírgula. Se preciso, arredonde.')" required/><br />
+            <input type="number" id="age" name="age" min="10" max="500" oninvalid="this.setCustomValidity('Tente usar um número maior que 10, sem ponto ou vírgula. Se preciso, arredonde.')" required/><br />
           <b><label for="weight">Peso:</label><br /></b>
           <input type="number" id="weight" name="weight" min="0" max="500"  oninvalid="this.setCustomValidity('Tente usar um número maior que 0, sem ponto ou vírgula. Se preciso, arredonde.')" required/><br />
           <b> <label for="height">Altura:</label><br /></b>
@@ -206,7 +206,7 @@
           <header class="header2">
             <div class="lgpd">
               <button type="submit" id="open-weight-height" class="btn-popup">Calcular &#10140;</button>
-              <div class="aviso"><br><br><br><br><br><br><br>
+              <div class="aviso">
                 <h3>OBS: Altura em centímetros! Sem vírgula ou ponto.<br>Caso seu peso seja número quebrado, arredonde.</h3> </div>
               <div class="modal-container" id="modal_container_weight-height">
                 <div class="modal">RESULTADO:
@@ -554,11 +554,11 @@ Extremamente ativo: TMB x 1.9
       </div>
       <div class="footer-center">
         <div>
-          <p>Orientador: <br />Nome do orientador</p>
+          <p>Orientador:</p><br><a class="leo" href="https://www.instagram.com/alssdr.nutri/" target="_blank">Alessandra Oliveira</a>
         </div>
         <h5 class="h5">.</h5>
         <div>
-          <p>Alunos:</p>
+          <p>Alunos:</p><br>
           <a class="leo" href="https://www.instagram.com/leoggm_/" target="_blank">Leonardo de Freitas</a>
           <br /><a class="leo" href="https://www.instagram.com/amandinha_guei/" target="_blank">Maria Amanda de Almeida Vieira</a>
         </div>

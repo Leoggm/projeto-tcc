@@ -69,7 +69,7 @@ document
 
       const result = await response.json();
       document.getElementById("weight-height-result").textContent = `IMC: ${result.result} - (${result.classification})`;
-      document.getElementById("ideal-weight-result").textContent = `${result.ideal}`;
+      document.getElementById("ideal-weight-result").textContent = `Peso ideal: ${result.idealmin}kg - ${result.ideal}kg`;
       console.log(result);
     } catch (error) {
       console.error(error);
