@@ -1,25 +1,41 @@
+const fastify = require('fastify')({ logger: true });
 
-// PARA QUE O SITE FUNCIONE COM TODAS AS DEPENDÊNCIAS
+fastify.post('/api/weight-height', async (request, reply) => {
+  const { weight, height, age, genero } = request.body;
 
-const express = require("express");
-const path = require("path");
+  if (!weight || !height) {
+    reply.status(400).send({ error: "Peso e Altura requeridos" });
+    return;
+  }
+  let result1 = weight / (height * height);
+  let result = result1 * 10000;
+  result = parseFloat(result.toFixed(2));
 
-const app = express();
-const pathh = path.join(__dirname, "");
+  let classification;
+  if (result < 18.4) {
+    classification = "Magreza";
+  } else if (result <= 24.9) {
+    classification = "Peso Ideal";
+  } else if (result <= 29.9) {
+    classification = "Sobrepeso";
+  } else if (result <= 34.9) {
+    classification = "Obesidade Grau 1";
+  } else if (result <= 39.9) {
+    classification = "Obesidade Grau 2";
+  } else {
+    classification = "Obesidade Grau 3";
+  }
 
-app.use(express.static(pathh));
-app.use(express.json());
+  let ideal = ((25 * (height * height)) / 1000000) * 100;
+  let idealmin = ((18.5 * (height * height)) / 1000000) * 100;
+  ideal = parseFloat(ideal.toFixed());
+  idealmin = parseFloat(idealmin.toFixed());
 
-app.get("/", (req, res) => {
-  const htmlFilePath = path.join(pathh, "index.html");
-  res.sendFile(htmlFilePath);
+  reply.status(200).send({ result, classification, ideal, idealmin });
 });
 
-//PESO ESTIMADO
-
-app.post("/api/estimated-weight", async (req, res) => {
-  console.log("post");
-  const { aj, cb, idade, genero, etnia } = req.body;
+fastify.post('/api/estimated-weight', async (request, reply) => {
+  const { aj, cb, idade, genero, etnia } = request.body;
 
   let calculatedWeight;
   if (idade >= 18 && idade <= 60) {
@@ -44,69 +60,29 @@ app.post("/api/estimated-weight", async (req, res) => {
     }
   }
 
-  calculatedWeight = parseFloat(calculatedWeight.toFixed(2));
-  res.status(201).json({ calculatedWeight });
-  console.log(calculatedWeight);
+  calculatedWeight =parseFloat(calculatedWeight.toFixed(2));
+  reply.status(201).send({ calculatedWeight });
 });
 
-// IMC
+fastify.post('/api/tmb', async (request, reply) => {
+  const { peso, altura, idade, sexo, atividade } = request.body;
 
-app.post("/api/weight-height", async (req, res) => {
-  const { weight, height, age, gener } = req.body;
-
-  if (!weight || !height) {
-    res.status(400).json({ error: "Peso e Altura requeridos" });
-    return;
-  }
-  let result1 = weight / (height * height);
-  let result = result1 * 10000;
-  result = result.toFixed(2);
-
-  let classification;
-  if (result < 18.4) {
-    classification = "Magreza";
-  } else if (result <= 24.9) {
-    classification = "Peso Ideal";
-  } else if (result <= 29.9) {
-    classification = "Sobrepeso";
-  } else if (result <= 34.9) {
-    classification = "Obesidade Grau 1";
-  } else if (result <= 39.9) {
-    classification = "Obesidade Grau 2";
-  } else {
-    classification = "Obesidade Grau 3";
+  let _calculatedtmb;
+  if (sexo === "Masculino") {
+    _calculatedtmb = 88.362 + 13.397 * peso + 4.799 * altura - 5.677 * idade;
+  } else if (sexo === "Feminino") {
+    _calculatedtmb = 44.593 + 9.247 * peso + 3.098 * altura - 3.33 * idade;
   }
 
-
-  let ideal = ((25 * (height * height)) / 1000000) * 100;
-  let idealmin = ((18.5 * (height * height)) / 1000000) * 100;
-  ideal = ideal.toFixed();
-  idealmin = idealmin.toFixed();
-
-  res.status(200).json({ result, classification, ideal, idealmin });
-  console.log(result, classification, ideal, idealmin);
+  let calculatedtmb = parseFloat(_calculatedtmb.toFixed(2));
+  calculatedtmb *= atividade;
+  reply.status(201).send({ calculatedtmb });
 });
 
-// TAXA DE METABOLISMO BASAL
-
-app.post("/api/tmb", async (req, res) => {
-  console.log("post");
-  const { pes, alt, idad, gene, activity } = req.body;
-
-  let calculatedtmb;
-  if (gene == "Masculino") {
-    calculatedtmb = 88.362 + 13.397 * pes + 4.799 * alt - 5.677 * idad;
-  } else if (gene == "Feminino") {
-    calculatedtmb = 44.593 + 9.247 * pes + 3.098 * alt - 3.33 * idad;
+fastify.listen(3000, (err, address) => {
+  if (err) {
+    fastify.log.error(err);
+    process.exit(1);
   }
-
-  calculatedtmb = parseFloat(calculatedtmb.toFixed(2));
-  res.status(201).json({ calculatedtmb, activity });
-  console.log(calculatedtmb);
-});
-
-// MOSTRAR QUE O SITE ESTÁ LIGADO
-
-app.listen(3000, () => {
-  console.log("Server listening on port 3000");
+  console.log(`Server listening on ${address}`);
 });
