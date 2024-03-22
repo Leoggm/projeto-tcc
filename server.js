@@ -107,3 +107,6 @@ app.post("/api/tmb", async (req, res) => {
 
 // MOSTRAR QUE O SITE ESTÁ LIGADO
 
+app.listen(3000, () => {
+  console.log("Server listening on port 3000");
+});
