@@ -239,7 +239,6 @@ min-height: 60vh;
 }
 .imc-table{
     border-spacing: 15px 3px;
-    align-content: center;
     border: 1px solid rgb(255, 0, 0);
     border-radius: 20px 20px 20px 20px;
     font-size: 12px;
@@ -805,6 +804,7 @@ section {
 .footer-tudo .footer-left {
   width: 30%;
   font-family: "Roboto", sans-serif;
+
 }
 
 .footer-tudo h3 {
@@ -882,13 +882,16 @@ section {
 }
 
 .footer-tudo .footer-company-sobre {
+  text-align: justify;
   line-height: 20px;
   color: #ffffff;
   font-size: 13px;
   font-weight: normal;
   margin: 0;
 }
-
+.footer-company-sobre span {
+  text-align: center;
+}
 .footer-tudo .footer-company-sobre span {
   display: block;
   color: #ffffff;
