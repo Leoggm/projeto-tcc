@@ -125,34 +125,7 @@ document
 
 /*Menu Celular*/
 
-function clickmenu() {
-  if (menu.style.display === "block") {
-    menu.style.display = "none";
-  } else {
-    menu.style.display = "block";
-  }
-}
 
-function exibir() {
-  if (mais.style.display === "block") {
-    mais.style.display = "none";
-  } else {
-    mais.style.display = "block";
-  }
-}
-
-function menuShow() {
-  let menuMobile = document.querySelector(".mobile-menu");
-  if (menuMobile.classList.contains("open")) {
-    menuMobile.classList.remove("open");
-    document.querySelector(".icon").src =
-      "https://cdn.glitch.global/6af1468b-cb11-4a91-ae86-6c41c33a11e0/download.png?v=1706309428369";
-  } else {
-    menuMobile.classList.add("open");
-    document.querySelector(".icon").src =
-      "https://cdn.glitch.global/6af1468b-cb11-4a91-ae86-6c41c33a11e0/download%20(1).png?v=1706309434007";
-  }
-}
 document
   .querySelector(".nav-item a.nav-link#bct")
   .addEventListener("click", (e) => {
