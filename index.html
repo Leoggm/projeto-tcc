@@ -209,8 +209,10 @@
               <div class="aviso">
                 <h3>OBS: Altura em centímetros! Sem vírgula ou ponto.<br>Caso seu peso seja número quebrado, arredonde.</h3> </div>
               <div class="modal-container" id="modal_container_weight-height">
-                <div class="modal">RESULTADO:
-                  <p id="weight-height-result"></p>
+                <div class="modal">
+                  <div class="center">RESULTADO:<br><br>
+                  <a  class="novores" id="weight-height-result"></a><br>
+                  <a  class="novores" id="ideal-weight-result"></a><br><br>
                   <table class="imc-table">
                     <thead>
                       <tr><th>Classificação</th><th>IMC</th></tr>
@@ -223,9 +225,10 @@
                       <tr><td>Obesidade G. II</td><td>35 - 39.9</td></tr>
                       <tr><td>Obesidade G. III</td><td>40+</td></tr>
                     </tbody>
-                  </table><br />
-                  <p id="ideal-weight-result"></p>
-                  <button id="close-weight-height" class="close-popup">Sair</button>
+                  </table><br><br>
+                RECOMENDAÇÕES:</div><br>
+                  <a class="novores" id="recomendasao"></a><br><br>
+                  <div class="center"><button id="close-weight-height" class="close-popup">Sair</button></div>
                 </div>
               </div>
             </div>
@@ -255,9 +258,6 @@
           medidas da altura do joelho (AJ) e da circunferência do braço (CB).
         </h1>
       </div>
-      <!--<div class="col-img">
-        <img src="https://cdn.glitch.global/0330d636-2f7d-43d0-ae13-0439620cd41a/Screenshot_15.png?v=1708358031200" class="img"/>
-      </div>-->
       <div class="table-estimated-of"><table class="table-estimated" cellpadding="1" cellspacing="1">
 	
         <tr>
@@ -448,10 +448,6 @@ CB = Circunferência do braço em cm</p>
     A = Altura
   </p>
 </div>
-
-      <!--<div class="col-img">
-        <img src="https://cdn.glitch.global/0330d636-2f7d-43d0-ae13-0439620cd41a/Screenshot_16.png?v=1708358102603" class="img"/>
-      </div>-->
     </div>
     <div class="infos">
       <div class="card">
@@ -533,9 +529,15 @@ Extremamente ativo: TMB x 1.9
               <div class="aviso">
                 <h3>OBS: Altura em centímetros! Sem vírgula ou ponto.<br>Caso seu peso seja número quebrado, arredonde.</h3> </div>
               <div class="modal-container" id="modal_container_tmb">
-                <div class="modal"> RESULTADO:
-                  <p id="estimatedtmb-result"></p>
-                  <button id="close-tmb" class="close-popup">Sair</button>
+                
+                <div class="modal"> 
+                 <div class="center"> RESULTADO: <br><br>
+                  <a class="novores"id="estimatedtmb-result"></a><br><br>
+                  RECOMENDAÇÕES:</div><br>
+                  <a class="novores">Doenças comuns relacionadas à TMB incluem distúrbios metabólicos como diabetes e hipotireoidismo e, por conta disso, há algumas especificações sobre o uso da calculadora.</a><br><br>
+                  <a class="novores">Para <u>diabetes</u>:<br> Recomenda-se uma dieta equilibrada com controle de carboidratos e açúcares, com alimentos ricos em fibras, proteínas magras e gorduras saudáveis.</a><br>
+                  <br><a class="novores">Para <u>hipotireoidismo</u>:<br> A dieta deve incluir alimentos ricos em iodo, como peixes, algas marinhas e ovos, e também é importante manter uma ingestão adequada de selênio e zinco, encontrados em nozes, sementes e grãos integrais.</a><br><br>
+                  <div class="center"><button id="close-tmb" class="close-popup">Sair</button>
                 </div>
               </div>
             </div>

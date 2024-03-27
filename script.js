@@ -65,6 +65,7 @@ document
     result = result.toFixed(2);
 
     let classification;
+
     if (result < 18.4) {
       classification = "Magreza";
     } else if (result <= 24.9) {
@@ -79,13 +80,28 @@ document
       classification = "Obesidade Grau 3";
     }
 
+    let recomend;
+    if (classification === "Magreza") {
+      recomend = "É importante aumentar a ingestão calórica e proteica, incorporando alimentos densos em nutrientes e frequentemente dividindo as refeições ao longo do dia para aumentar a ingestão calórica total.";
+    }  else if (classification === "Peso Ideal") {
+      recomend = "Mantenha uma dieta equilibrada com uma variedade de alimentos, incluindo frutas, vegetais, grãos integrais, proteínas magras e gorduras saudáveis. Beba água regularmente e pratique exercícios físicos.";
+    }  else if (classification === "Sobrepeso") {
+      recomend = "A abordagem deve incluir modificações na dieta e no estilo de vida para alcançar uma redução de peso saudável, enfatizando alimentos integrais, frutas, vegetais, proteínas magras e limitando alimentos processados e açucarados.";
+    } else if (classification === "Obesidade Grau 1") {
+     recomend = "Aumente o consumo de alimentos ricos em fibras, como frutas, vegetais e grãos integrais, para promover a saciedade e regularidade intestinal. Reduza a ingestão calórica total, limitando alimentos ricos em gordura e açúcar.";
+    }  else if (classification === "Obesidade Grau 2") {
+      recomend = "Consulte um nutricionista para desenvolver um plano alimentar personalizado que leve em consideração as necessidades específicas de saúde e as preferências alimentares. Faça modificações na dieta para reduzir a ingestão calórica, possivelmente através de uma dieta com restrição calórica supervisionada.";
+    }  else if (classification === "Obesidade Grau 3") {
+      recomend = "Consulte um nutricionista para desenvolver um plano alimentar personalizado que leve em consideração as necessidades específicas de saúde e as preferências alimentares. Faça modificações na dieta para reduzir a ingestão calórica, possivelmente através de uma dieta com restrição calórica supervisionada.";
+    }
     let ideal = ((25 * (height * height)) / 1000000) * 100;
     let idealmin = ((18.5 * (height * height)) / 1000000) * 100;
     ideal = ideal.toFixed();
     idealmin = idealmin.toFixed();
 
     document.getElementById("weight-height-result").textContent = `IMC: ${result} - (${classification})`;
-    document.getElementById("ideal-weight-result").textContent = `Peso ideal: ${idealmin}kg - ${ideal}kg`;
+    document.getElementById("ideal-weight-result").textContent = `Peso Ideal: ${idealmin}kg - ${ideal}kg`;
+    document.getElementById("recomendasao").textContent = `${recomend}`;
 });
 
 
@@ -116,7 +132,7 @@ document
     calculatedtmb = parseFloat(calculatedtmb.toFixed(2));
     const finalact = parseFloat((calculatedtmb * data.activity).toFixed(2));
 
-    document.getElementById("estimatedtmb-result").textContent = `Sua taxa de Metabolismo Basal é de: ${calculatedtmb} calorias e seu gasto é de ${finalact} calorias em média.`;
+    document.getElementById("estimatedtmb-result").innerHTML = `Sua taxa de Metabolismo Basal é de: <u>${calculatedtmb}</u> calorias e seu gasto é de <u>${finalact}</u> calorias em média.`;
     console.log(calculatedtmb);
   });
 
