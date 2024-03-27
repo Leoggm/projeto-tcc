@@ -947,5 +947,14 @@ section {
 .leo {
   color: white;
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  text-align: center;
 }
 
+#insta {
+  width: 25px; /* Defina a largura desejada */
+  height: auto; /* Mantém a proporção original da imagem */
+  margin-right: 0px;
+
+}
