@@ -14,31 +14,33 @@ document
       cb: formData.get("cb"),
     };
 
-    try {
-      const response = await fetch("/api/estimated-weight", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
-
-      if (!response.ok) {
-        throw new Error("Falha ao calcular o peso");
+    let calculatedWeight;
+    if (data.idade >= 18 && data.idade <= 60) {
+      if (data.etnia === "Branco(a)" && data.genero === "Masculino") {
+        calculatedWeight = data.aj * 1.19 + data.cb * 3.21 - 86.82;
+      } else if (data.etnia === "Negro(a)" && data.genero === "Masculino") {
+        calculatedWeight = data.aj * 1.09 + data.cb * 3.14 - 83.72;
+      } else if (data.etnia === "Branco(a)" && data.genero === "Feminino") {
+        calculatedWeight = data.aj * 1.01 + data.cb * 2.81 - 60.04;
+      } else if (data.etnia === "Negro(a)" && data.genero === "Feminino") {
+        calculatedWeight = data.aj * 1.24 + data.cb * 2.97 - 82.48;
       }
-
-      const result = await response.json();
-      result.calculatedWeight = parseFloat(result.calculatedWeight.toFixed(2));
-      document.getElementById(
-        "estimated-weight-result"
-      ).textContent = `Peso estimado: ${result.calculatedWeight}`;
-      console.log();
-    } catch (error) {
-      console.error(error);
-      document.getElementById("estimated-weight-result").textContent =
-        "Um erro aconteceu ao calcular o peso estimado.";
+    } else {
+      if (data.etnia === "Branco(a)" && data.genero === "Masculino") {
+        calculatedWeight = data.aj * 1.1 + data.cb * 3.07 - 75.81;
+      } else if (data.etnia === "Negro(a)" && data.genero === "Masculino") {
+        calculatedWeight = data.aj * 0.44 + data.cb * 2.86 - 39.21;
+      } else if (data.etnia === "Branco(a)" && data.genero === "Feminino") {
+        calculatedWeight = data.aj * 1.09 + data.cb * 2.68 - 65.51;
+      } else if (data.etnia === "Negro(a)" && data.genero === "Feminino") {
+        calculatedWeight = data.aj * 1.5 + data.cb * 2.58 - 85.22;
+      }
     }
-  });
+
+    calculatedWeight = parseFloat(calculatedWeight.toFixed(2));
+    document.getElementById("estimated-weight-result").textContent = `Peso estimado: ${calculatedWeight}`;
+    console.log(calculatedWeight)
+});
 
 /*IMC*/
 
@@ -49,83 +51,90 @@ document
 
     const weight = document.getElementById("weight").value;
     const height = document.getElementById("height").value;
-    const gener = document.getElementById("gener").value;
     const age = document.getElementById("age").value;
+    const gener = document.getElementById("gener").value;
 
-    try {
-      const response = await fetch("/api/weight-height", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ weight, height,age, gener }),
-      });
-
-      if (!response.ok) {
-        throw new Error(
-          "Falha ao calcular o peso dividida pela altura ao quadrado"
-        );
-      }
-
-      const result = await response.json();
-      document.getElementById("weight-height-result").textContent = `IMC: ${result.result} - (${result.classification})`;
-      document.getElementById("ideal-weight-result").textContent = `Peso ideal: ${result.idealmin}kg - ${result.ideal}kg`;
-      console.log(result);
-    } catch (error) {
-      console.error(error);
+    if (!weight || !height) {
       document.getElementById("weight-height-result").textContent =
-        "Um erro aconteceu ao calcular a idade dividida pela altura ao quadrado.";
+        "Peso e altura são necessários.";
+      return;
     }
-  });
+
+    let result1 = weight / (height * height);
+    let result = result1 * 10000;
+    result = result.toFixed(2);
+
+    let classification;
+    if (result < 18.4) {
+      classification = "Magreza";
+    } else if (result <= 24.9) {
+      classification = "Peso Ideal";
+    } else if (result <= 29.9) {
+      classification = "Sobrepeso";
+    } else if (result <= 34.9) {
+      classification = "Obesidade Grau 1";
+    } else if (result <= 39.9) {
+      classification = "Obesidade Grau 2";
+    } else {
+      classification = "Obesidade Grau 3";
+    }
+
+    let ideal = ((25 * (height * height)) / 1000000) * 100;
+    let idealmin = ((18.5 * (height * height)) / 1000000) * 100;
+    ideal = ideal.toFixed();
+    idealmin = idealmin.toFixed();
+
+    document.getElementById("weight-height-result").textContent = `IMC: ${result} - (${classification})`;
+    document.getElementById("ideal-weight-result").textContent = `Peso ideal: ${idealmin}kg - ${ideal}kg`;
+});
+
 
 /*TMB*/
 
-document
+
+  document
   .getElementById("tmb-form")
   .addEventListener("submit", async (event) => {
     event.preventDefault();
 
     const formData = new FormData(event.target);
     const data = {
+      pes: parseFloat(formData.get("pes")),
+      alt: parseFloat(formData.get("alt")),
+      idad: parseFloat(formData.get("idad")),
       gene: formData.get("gene"),
-      idad: formData.get("idad"),
-      pes: formData.get("pes"),
-      alt: formData.get("alt"),
-      activity: formData.get("activity"),
+      activity: parseFloat(formData.get("activity")),
     };
 
-    try {
-      const response = await fetch("/api/tmb", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
-
-      if (!response.ok) {
-        throw new Error("Falha ao calcular a taxa");
-      }
-
-      const result = await response.json();
-      const finalTMB = parseFloat(result.calculatedtmb.toFixed(2));
-      const totalCaloricExpenditure = parseFloat(
-        (finalTMB * result.activity).toFixed(2)
-      );
-      document.getElementById(
-        "estimatedtmb-result"
-      ).textContent = `Sua taxa metabólica basal é de ${finalTMB} calorias. Já o seu gasto calórico total é de ${totalCaloricExpenditure} calorias.`;
-      console.log();
-    } catch (error) {
-      console.error(error);
-      document.getElementById("estimatedtmb-result").textContent =
-        "Um erro aconteceu ao calcular a taxa de matabolismo basal.";
+    let calculatedtmb;
+    if (data.gene === "Masculino") {
+      calculatedtmb = 88.362 + 13.397 * data.pes + 4.799 * data.alt - 5.677 * data.idad;
+    } else if (data.gene === "Feminino") {
+      calculatedtmb = 44.593 + 9.247 * data.pes + 3.098 * data.alt - 3.33 * data.idad;
     }
+
+    calculatedtmb = parseFloat(calculatedtmb.toFixed(2));
+    const finalact = parseFloat((calculatedtmb * data.activity).toFixed(2));
+
+    document.getElementById("estimatedtmb-result").textContent = `Sua taxa de Metabolismo Basal é de: ${calculatedtmb} calorias e seu gasto é de ${finalact} calorias em média.`;
+    console.log(calculatedtmb);
   });
 
 /*Menu Celular*/
 
 
+function menuShow() {
+  let menuMobile = document.querySelector(".mobile-menu");
+  if (menuMobile.classList.contains("open")) {
+    menuMobile.classList.remove("open");
+    document.querySelector(".icon").src =
+      "https://cdn.glitch.global/6af1468b-cb11-4a91-ae86-6c41c33a11e0/download.png?v=1706309428369";
+  } else {
+    menuMobile.classList.add("open");
+    document.querySelector(".icon").src =
+      "https://cdn.glitch.global/6af1468b-cb11-4a91-ae86-6c41c33a11e0/download%20(1).png?v=1706309434007";
+  }
+}
 document
   .querySelector(".nav-item a.nav-link#bct")
   .addEventListener("click", (e) => {
