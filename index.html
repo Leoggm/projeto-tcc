@@ -12,7 +12,7 @@
     <meta name="description" content="TCC sobre cálculos nutricionais, contendo calculadora de IMC, TMB e Peso Estimado." />
     <meta property="og:image" content="https://cdn.glitch.global/6af1468b-cb11-4a91-ae86-6c41c33a11e0/pngegg.png?v=1709671873996"/>
     <link rel="icon" href="https://cdn.glitch.global/6af1468b-cb11-4a91-ae86-6c41c33a11e0/pngegg.png?v=1709671873996"/>
-    <title>TCC - Leo e Amanda</title>
+    <title>NutriCalc</title>
     <link rel="stylesheet" href="style.css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -198,7 +198,7 @@
             <option value="Masculino">Masculino</option>
             <option value="Feminino">Feminino</option></select><br />
             <b><label for="age">Idade</label><br></b>
-            <input type="number" id="age" name="age" min="10" max="500" oninvalid="this.setCustomValidity('Tente usar um número maior que 10, sem ponto ou vírgula. Se preciso, arredonde.')" required/><br />
+            <input type="number" id="age" name="age" min="0" max="500" oninvalid="this.setCustomValidity('Tente usar um número maior que 10, sem ponto ou vírgula. Se preciso, arredonde.')" required/><br />
           <b><label for="weight">Peso:</label><br /></b>
           <input type="number" id="weight" name="weight" min="0" max="500"  oninvalid="this.setCustomValidity('Tente usar um número maior que 0, sem ponto ou vírgula. Se preciso, arredonde.')" required/><br />
           <b> <label for="height">Altura:</label><br /></b>
@@ -515,7 +515,7 @@ Extremamente ativo: TMB x 1.9
             <option value="Masculino">Masculino</option>
             <option value="Feminino">Feminino</option></select><br />
           <b> <label for="idad">Idade:</label></b> <br />
-          <input type="number" id="idad" name="idad"  min="18" max="500" required/><br />
+          <input type="number" id="idad" name="idad"  min="0" max="500" required/><br />
           <b> <label for="alt">Altura:</label></b> <br />
           <input type="number" id="alt" name="alt" min="0" max="500" oninvalid="this.setCustomValidity('Tente usar um número maior que 0, sem ponto ou vírgula. Se preciso, arredonde.')" required /><br>
           <b> <label for="pes">Peso:</label></b>  <br />
