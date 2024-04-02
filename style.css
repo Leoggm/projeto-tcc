@@ -876,6 +876,8 @@ section {
 .footer-tudo .footer-center p a {
   color: #ffffff;
   text-decoration: none;
+  text-align: center;
+  font-size: 9px;
 }
 
 .footer-tudo .footer-right {
@@ -951,6 +953,7 @@ section {
   display: flex;
   align-items: center;
   text-align: center;
+  font-size: 15px;
 }
 
 #insta {
