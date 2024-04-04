@@ -138,8 +138,6 @@ document
 
 /*Menu Celular*/
 
-
-
 function clickmenu() {
   if (menu.style.display === "block") {
       menu.style.display = "none"
