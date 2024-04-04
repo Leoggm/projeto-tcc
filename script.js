@@ -147,10 +147,6 @@ function clickmenu() {
       menu.style.display = "block"
   }
 }
-
-
-
-
 function exibir() {
   if (mais.style.display === "block") {
       mais.style.display = "none"
@@ -253,6 +249,9 @@ openAgeHeight.addEventListener("click", () => {
 closeAgeHeight.addEventListener("click", () => {
   modalContainerAgeHeight.classList.remove("show");
 });
+
+//BOTÃO DE LER MAIS
+
 document.addEventListener("DOMContentLoaded", function () {
   const buttons = document.querySelectorAll("[id*='read_button']");
   buttons.forEach((button) => {
@@ -267,6 +266,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+// BOTÃO DE SUBIR
 
 window.addEventListener('scroll', function() {
   let scroll = this.document.querySelector('.scrollTop')

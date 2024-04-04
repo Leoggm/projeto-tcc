@@ -10,7 +10,7 @@
   min-height: 90vh 80vh;
   width: 100%;
   background-image: linear-gradient(#0033ffb3, #000000ca),
-    url(https://cdn.glitch.global/6af1468b-cb11-4a91-ae86-6c41c33a11e0/Screenshot_4.png?v=1706309743562);
+    url("assets/banner.png");
   opacity: 0.9;
   background-position: center;
   background-size: cover;
@@ -213,10 +213,6 @@ min-height: 60vh;
 
 /** Card **/
 .card {
-   /** background-image: linear-gradient(#264557, #000000bb),
-    url(https://cdn.glitch.global/6af1468b-cb11-4a91-ae86-6c41c33a11e0/blurry-gradient-haikei.png?v=1708713022407);
-    background-position: center;
-    background-size: cover;**/
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -325,7 +321,7 @@ min-height: 60vh;
   }
   .mobile-menu nav {
     background-image: linear-gradient(#0033ff75, #000000ca),
-      url("https://cdn.glitch.global/0330d636-2f7d-43d0-ae13-0439620cd41a/blurry-gradient-haikei%20(1).png?v=1708293217663");
+      url("assets/gradiente.png");
     width: 300px;
     height: 100vh;
     right: 0px;
