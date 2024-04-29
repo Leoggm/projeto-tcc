@@ -170,14 +170,14 @@ document
   .querySelector(".nav-item a.nav-link#bct3")
   .addEventListener("click", (e) => {
     e.preventDefault();
-    const targetSection = document.querySelector("#foot");
+    const targetSection = document.querySelector("#recomend");
     targetSection.scrollIntoView({ behavior: "smooth" });
   });
 document
   .querySelector(".mobile-menu a.nav-menu#bct4")
   .addEventListener("click", (e) => {
     e.preventDefault();
-    const targetSection = document.querySelector("#foot");
+    const targetSection = document.querySelector("#recomend");
     targetSection.scrollIntoView({ behavior: "smooth" });
   });
 document
