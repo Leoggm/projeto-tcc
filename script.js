@@ -321,36 +321,36 @@ function showRecommendation(doenca) {
       trat = "O tratamento da doença é de extrema importância, pois a hiperglicemia, a longo prazo, pode ocasionar complicações, principalmente cardiovasculares, renais, comprometimento neurológico e ocular. Para tratar a diabetes é necessário uso de medicamentos que auxiliam no controle da glicemia e ter um estilo de vida saudável, baseado na prática regular de exercícios físicos e alimentação balanceada. Outros pontos importantes são: sono adequado, reduzir estresse e ter atividades de lazer com frequência. É fundamental também a vigilância e controle intensivo de outros fatores como o colesterol e a pressão arterial."
       trata = "TRATAMENTO"
       sobre = "SOBRE"
-      dodo = " "
-      dede = " "
-      didi = " "
+      dodo = "assets/diabetes1.png"
+      dede = "assets/diabetes2.png"
+      didi = "assets/diabetes3.png"
     break;
     case "diarreia":
       message = "A diarreia é caracterizada pela frequente evacuação de fezes líquidas, geralmente três ou mais evacuações ao dia, acompanhada de perda excessiva de líquidos e eletrólitos, especialmente sódio e potássio."
       trat = "O tratamento nutricional tem como objetivo remover ou minimizar a causa, repor liquidos e eletrólitos e fornecer uma alimentação adequada. É indicado ofertar líquidos e eletrólitos suficientes para repor as perdas, normalmente leite e derivados devem ser evitados. Recomenda-se, ainda, aumentar o aporte de fibras, priorizando alimentos ricos em fibras solúveis, como aveia e cevada, e evitar alimentos fermentativos, como feijão, repolho e folhas em geral."
       trata = "TRATAMENTO"
       sobre = "SOBRE"
-      dodo = " "
-      dede = " "
-      didi = " "   
+      dodo = "assets/diarreia1.png"
+      dede = "assets/diarreia2.png"
+      didi = "assets/diarreia3.png"   
        break;
     case "gastrite":
       message = "A gastrite é a inflamação da mucosa que reveste a parede do estômago, podendo ser provocada por infecção bacteriana, uso de medicamentos, consu- mo de bebida alcoólica, alimentação inadequada ou doença autoimune e tem como sintoma dor e/ou queimação na 'boca do estômago', perda de apetite, náuseas e vômitos."
       trat = "O tratamento da gastrite envolve cuidados com a alimentação, como fazer 5 a 6 refeições diárias, mastigar bem os alimentos e evitar comidas gordurosas e ricas em carboidratos simples. Também é importante evitar bebidas alcoólicas, refrigerantes, café, chás e condimentos. Prefira alimentos com menos gordura e opte por chás como erva doce, camomila, cidreira e hortelã. Evite líquidos durante as refeições, não deite ou faça exercícios imediatamente após comer, e evite alimentos em conserva. Não se automedique; busque orientação médica e consulte um nutricionista para uma dieta adequada."
       trata = "TRATAMENTO"
       sobre = "SOBRE"
-      dodo = " "
-      dede = " "
-      didi = " "
+      dodo = "assets/gastrite1.png"
+      dede = "assets/gastrite2.png"
+      didi = "assets/gastrite3.png"
     break;
     case "hiper":
       message = "Hipertensão (pressão alta) é uma doença democrática que acomete crianças, adultos e idosos, homens e mulheres de todas as classes sociais e condições financeiras. Popularmente conhecida como “pressão alta”, está relacionada com a força que o sangue faz contra as paredes das artérias para conseguir circular por todo o corpo. O estreitamento das artérias aumenta a necessidade de o coração bombear com mais força para impulsionar o sangue e recebê-lo de volta. Como consequência, a hipertensão dilata o coração e danifica as artérias."
       trat = "O objetivo do tratamento deve ser não deixar a pressão ultrapassar os valores de 12 por 8. Nos casos de hipertensão leve, com a mínima entre 9 e 10, tenta-se primeiro o tratamento não medicamentoso, que é muito importante e envolve mudanças nos hábitos de vida. A pessoa precisa praticar exercícios físicos, não exagerar no sal e na bebida alcoólica, controlar o estresse e o peso, levar vida saudável."
       trata = "TRATAMENTO"
       sobre = "SOBRE"
-      dodo = " "
-      dede = " "
-      didi = " "
+      dodo = "assets/hiper1.png"
+      dede = "assets/hiper2.png"
+      didi = "assets/hiper3.png"
     break;
     default:
       message = "Selecione uma doença para ver a recomendação.";
