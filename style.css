@@ -1010,6 +1010,7 @@ font-size: 11px;
 font-weight: bold; 
 } 
 .imagins {
+  margin-bottom: 5px;
   width: 100% 20%; 
   height: 90px; 
   display: flex;
@@ -1048,9 +1049,7 @@ background-color: #ffffffff;
 border-radius: 20px 20px 20px 20px;
 border: 2px solid #c66e02;
 }
-.cards #imag {
-justify-content: center;
-}
+
 .dados {
   font-size: 12px;
   text-align: center;
