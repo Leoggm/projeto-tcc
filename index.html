@@ -71,6 +71,7 @@
     <!-- IMC -->
     <button class="scrollTop" onclick="backTop();">
 <img src="assets/cima.png" alt=" ">    </button>
+
     <div class="titulo" id="squares">
 
       <h3>_____</h3>
@@ -548,6 +549,53 @@ Extremamente ativo: TMB x 1.9
       </div>
     </header>
 
+    <div class="titulo">
+      <h3>_____</h3>
+      <h1>RECOMENDAÇÕES</h1>
+    </div>
+    <div class="espaco">
+    </div>
+    <div class="reco">
+      <div class="infos1">
+        <div class="cards">
+          <div class="icons">
+          </div>
+          <form id="recomend">
+            <b><label for="doenca">DOENÇAS: </label></b><br/>
+            <select id="doenca" name="doenca" onchange="showRecommendation(this.value)">
+            <option value="nada">ㅤㅤ</option>
+            <option value="anemia">Anemia</option> 
+            <option value="desnutri">Desnutrição</option>
+            <option value="diabetes">Diabetes</option>
+            <option value="diarreia">Diarreia</option>
+            <option value="gastrite">Gastrite</option>
+            <option value="hiper">Hipertensão</option>
+           </select><br />
+          </form>
+          <div class="contents">
+              <h3 id="recomendat"></h3>
+                <h1 id="recommendation-message">
+                  Selecione uma doença para ver sobre.<br><br>
+                  
+                  As informações sobre as doenças foram obtidas a partir dos renomados livros da coleção Sanar de nutrição.
+                  
+                  <br><Br>Esta coleção é conhecida por sua abordagem abrangente e baseada em evidências sobre diversos aspectos da nutrição,
+                  incluindo doenças relacionadas à alimentação e suas terapias correspondentes.
+                </h1>
+              <h3 id="tratam"></h3>
+              <h1 id="tratament-message"></h1>
+              <div class="imagins">
+              <img id="imag">
+              <img id="imag2">
+              <img id="imag3">
+              </div>
+          </div>
+      </div>
+    </div>
+    </div>
+    <div class="dados">
+    <h7>Dados obtidos através da Coleção Sanar de Nutrição</h7>
+  </div>
     <!-- RODAPÉ -->
 
     <footer class="footer-tudo">

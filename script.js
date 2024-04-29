@@ -278,3 +278,90 @@ function backTop() {
     behavior: 'smooth'
   })
 }
+
+
+function showRecommendation(doenca) {
+  var message;
+  var trat;
+  var dodo;
+  var dede;
+  var didi;
+  var trata;
+  var sobre;
+  switch (doenca) {
+    case "nada":
+      sobre = "Selecione uma doença para ver sobre. "
+      message = "As informações sobre as doenças foram obtidas a partir dos renomados livros da coleção Sanar de nutrição."
+      trat = "Esta coleção é conhecida por sua abordagem abrangente e baseada em evidências sobre diversos aspectos da nutrição, incluindo doenças relacionadas à alimentação e suas terapias correspondentes."
+      dodo = " "
+      dede = " "
+      didi = " "
+      trata = " "
+      break;
+    case "anemia":
+      message = "A anemia é a falta de hemoglobina no sangue. A hemoglobina, por sua vez, é uma proteína que compõe os glóbulos vermelhos, conhecidos também como hemácias. É ela a responsável pelo transporte de oxigênio no sangue, que chega até os órgãos e tecidos do corpo todo. Em uma pessoa com anemia, alguma disfunção do organismo ou fator externo fazem com que a produção de hemoglobina fique abaixo do considerado normal.";
+      trat = "Como a anemia se manifesta de diversas maneiras e por variadas causas, o principal aspecto de um bom tratamento é identificar o que gera a queda do nível de hemoglobina no sangue. Com a causa clara, parte-se para a ação."
+      dodo = "assets/anemia.png"
+      dede = "assets/vitam.png"
+      didi = "assets/anemia2.png"
+      trata = "TRATAMENTO"
+      sobre = "SOBRE"
+      break;
+    case "desnutri":
+      message = "A desnutrição é caracterizada pela deficiência de energia, proteína e outros nutrientes, resultando em alterações físicas, teciduais, funcionais e clínicas. Isso abrange tanto a falta de energia e proteínas quanto a carência de micronutrientes e outros nutrientes essenciais. A progressão da desnutrição pode envolver mudanças físicas, hormonais e hematológicas, além de complicações graves que podem levar à morte.";
+      trat = "Na terapia nutricional para desnutrição, um aumento de 500 a 1000 kcal é recomendado. Na terapia enteral, começa-se com 20 kcal/h no primeiro dia, aumentando gradualmente para atender às necessidades diárias. A realimentação agressiva pode levar à Síndrome da Realimentação, uma condição potencialmente fatal de desequilíbrio ao ganhar peso. Na fase de reabilitação, administra-se 3 a 4mg/kg de peso/dia do mineral por via oral para evitar complicações, como o agravamento de infecções."
+      dodo = "assets/desnutri.png"
+      dede = "assets/desnutri2.png"
+      didi = "assets/desnutri3.png"
+      trata = "TRATAMENTO"
+      sobre = "SOBRE"
+      break;
+    case "diabetes":
+      message = "Diabetes mellitus tipo 2 é uma doença metabólica crônica caracterizada por valores elevados de glicose no sangue; a hiperglicemia. A doença se desenvolve pelo comprometimento progressivo da produção de insulina pelas células pancreáticas tipo beta e pela resistência a ação do hormônio em órgãos como fígado e músculo. "
+      trat = "O tratamento da doença é de extrema importância, pois a hiperglicemia, a longo prazo, pode ocasionar complicações, principalmente cardiovasculares, renais, comprometimento neurológico e ocular. Para tratar a diabetes é necessário uso de medicamentos que auxiliam no controle da glicemia e ter um estilo de vida saudável, baseado na prática regular de exercícios físicos e alimentação balanceada. Outros pontos importantes são: sono adequado, reduzir estresse e ter atividades de lazer com frequência. É fundamental também a vigilância e controle intensivo de outros fatores como o colesterol e a pressão arterial."
+      trata = "TRATAMENTO"
+      sobre = "SOBRE"
+      dodo = " "
+      dede = " "
+      didi = " "
+    break;
+    case "diarreia":
+      message = "A diarreia é caracterizada pela frequente evacuação de fezes líquidas, geralmente três ou mais evacuações ao dia, acompanhada de perda excessiva de líquidos e eletrólitos, especialmente sódio e potássio."
+      trat = "O tratamento nutricional tem como objetivo remover ou minimizar a causa, repor liquidos e eletrólitos e fornecer uma alimentação adequada. É indicado ofertar líquidos e eletrólitos suficientes para repor as perdas, normalmente leite e derivados devem ser evitados. Recomenda-se, ainda, aumentar o aporte de fibras, priorizando alimentos ricos em fibras solúveis, como aveia e cevada, e evitar alimentos fermentativos, como feijão, repolho e folhas em geral."
+      trata = "TRATAMENTO"
+      sobre = "SOBRE"
+      dodo = " "
+      dede = " "
+      didi = " "   
+       break;
+    case "gastrite":
+      message = "A gastrite é a inflamação da mucosa que reveste a parede do estômago, podendo ser provocada por infecção bacteriana, uso de medicamentos, consu- mo de bebida alcoólica, alimentação inadequada ou doença autoimune e tem como sintoma dor e/ou queimação na 'boca do estômago', perda de apetite, náuseas e vômitos."
+      trat = "O tratamento da gastrite envolve cuidados com a alimentação, como fazer 5 a 6 refeições diárias, mastigar bem os alimentos e evitar comidas gordurosas e ricas em carboidratos simples. Também é importante evitar bebidas alcoólicas, refrigerantes, café, chás e condimentos. Prefira alimentos com menos gordura e opte por chás como erva doce, camomila, cidreira e hortelã. Evite líquidos durante as refeições, não deite ou faça exercícios imediatamente após comer, e evite alimentos em conserva. Não se automedique; busque orientação médica e consulte um nutricionista para uma dieta adequada."
+      trata = "TRATAMENTO"
+      sobre = "SOBRE"
+      dodo = " "
+      dede = " "
+      didi = " "
+    break;
+    case "hiper":
+      message = "Hipertensão (pressão alta) é uma doença democrática que acomete crianças, adultos e idosos, homens e mulheres de todas as classes sociais e condições financeiras. Popularmente conhecida como “pressão alta”, está relacionada com a força que o sangue faz contra as paredes das artérias para conseguir circular por todo o corpo. O estreitamento das artérias aumenta a necessidade de o coração bombear com mais força para impulsionar o sangue e recebê-lo de volta. Como consequência, a hipertensão dilata o coração e danifica as artérias."
+      trat = "O objetivo do tratamento deve ser não deixar a pressão ultrapassar os valores de 12 por 8. Nos casos de hipertensão leve, com a mínima entre 9 e 10, tenta-se primeiro o tratamento não medicamentoso, que é muito importante e envolve mudanças nos hábitos de vida. A pessoa precisa praticar exercícios físicos, não exagerar no sal e na bebida alcoólica, controlar o estresse e o peso, levar vida saudável."
+      trata = "TRATAMENTO"
+      sobre = "SOBRE"
+      dodo = " "
+      dede = " "
+      didi = " "
+    break;
+    default:
+      message = "Selecione uma doença para ver a recomendação.";
+    
+  }
+  document.getElementById("recommendation-message").innerHTML = message;
+  document.getElementById("tratament-message").innerHTML = trat;
+  document.getElementById("recomendat").innerHTML = sobre;
+  document.getElementById("tratam").innerHTML = trata;
+  document.getElementById("imag").src = dodo;
+  document.getElementById("imag2").src = dede;
+  document.getElementById("imag3").src = didi;
+  }
+
