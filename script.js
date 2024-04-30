@@ -1,45 +1,76 @@
 /*Peso Estimado*/
 
-document
-  .getElementById("estimated-weight-form")
-  .addEventListener("submit", async (event) => {
-    event.preventDefault();
+document.getElementById("rcq-form").addEventListener("submit", async (event) => {
+  event.preventDefault();
 
-    const formData = new FormData(event.target);
-    const data = {
-      genero: formData.get("genero"),
-      etnia: formData.get("etnia"),
-      idade: formData.get("idade"),
-      aj: formData.get("aj"),
-      cb: formData.get("cb"),
-    };
+  const formData = new FormData(event.target);
+  const data = {
+    genero: formData.get("generor"),
+    idade: parseInt(formData.get("idade-rcq")),
+    cq: parseFloat(formData.get("cq")),
+    cc: parseFloat(formData.get("cc")),
+  };
+  const resultado = data.cc / data.cq;
 
-    let calculatedWeight;
-    if (data.idade >= 18 && data.idade <= 60) {
-      if (data.etnia === "Branco(a)" && data.genero === "Masculino") {
-        calculatedWeight = data.aj * 1.19 + data.cb * 3.21 - 86.82;
-      } else if (data.etnia === "Negro(a)" && data.genero === "Masculino") {
-        calculatedWeight = data.aj * 1.09 + data.cb * 3.14 - 83.72;
-      } else if (data.etnia === "Branco(a)" && data.genero === "Feminino") {
-        calculatedWeight = data.aj * 1.01 + data.cb * 2.81 - 60.04;
-      } else if (data.etnia === "Negro(a)" && data.genero === "Feminino") {
-        calculatedWeight = data.aj * 1.24 + data.cb * 2.97 - 82.48;
-      }
-    } else {
-      if (data.etnia === "Branco(a)" && data.genero === "Masculino") {
-        calculatedWeight = data.aj * 1.1 + data.cb * 3.07 - 75.81;
-      } else if (data.etnia === "Negro(a)" && data.genero === "Masculino") {
-        calculatedWeight = data.aj * 0.44 + data.cb * 2.86 - 39.21;
-      } else if (data.etnia === "Branco(a)" && data.genero === "Feminino") {
-        calculatedWeight = data.aj * 1.09 + data.cb * 2.68 - 65.51;
-      } else if (data.etnia === "Negro(a)" && data.genero === "Feminino") {
-        calculatedWeight = data.aj * 1.5 + data.cb * 2.58 - 85.22;
-      }
+  let classificacao;
+  if (data.genero === "Masculino") {
+    if (data.idade <= 20 && data.idade <= 29) {
+      if (resultado < 0.83) classificacao = "baixa", mensagi = "Seu índice de RQC indica um baixo risco de complicações cardiovasculares. Continue mantendo um estilo de vida saudável!";
+      else if (resultado >= 0.83 && resultado <= 0.88) classificacao = "moderada", mensagi = "Seu índice de RQC sugere um risco moderado de complicações cardiovasculares. Considere ajustes na dieta e no exercício para melhorar sua saúde cardiovascular.";
+      else if (resultado > 0.88 && resultado <= 0.94) classificacao = "alta", mensagi = "Seu índice de RQC indica um alto risco de complicações cardiovasculares. É importante consultar um profissional de saúde para avaliação e orientação adequada.";
+      else classificacao = "muito alta", mensagi = "Seu índice de RQC mostra um risco muito alto de complicações cardiovasculares. Busque imediatamente aconselhamento médico para iniciar medidas preventivas e de tratamento.";
+    } else if (data.idade >= 30 && data.idade <= 39) {
+      if (resultado < 0.84) classificacao = "baixa", mensagi = "Seu índice de RQC indica um baixo risco de complicações cardiovasculares. Continue mantendo um estilo de vida saudável!";
+      else if (resultado >= 0.84 && resultado <= 0.91) classificacao = "moderada", mensagi = "Seu índice de RQC sugere um risco moderado de complicações cardiovasculares. Considere ajustes na dieta e no exercício para melhorar sua saúde cardiovascular.";
+      else if (resultado > 0.91 && resultado <= 0.96) classificacao = "alta", mensagi = "Seu índice de RQC indica um alto risco de complicações cardiovasculares. É importante consultar um profissional de saúde para avaliação e orientação adequada.";
+      else classificacao = "muito alta", mensagi = "Seu índice de RQC mostra um risco muito alto de complicações cardiovasculares. Busque imediatamente aconselhamento médico para iniciar medidas preventivas e de tratamento.";
+    } else if (data.idade >= 40 && data.idade <= 49) {
+      if (resultado < 0.88) classificacao = "baixa", mensagi = "Seu índice de RQC indica um baixo risco de complicações cardiovasculares. Continue mantendo um estilo de vida saudável!";
+      else if (resultado >= 0.88 && resultado <= 0.95) classificacao = "moderada", mensagi = "Seu índice de RQC sugere um risco moderado de complicações cardiovasculares. Considere ajustes na dieta e no exercício para melhorar sua saúde cardiovascular.";
+      else if (resultado > 0.95 && resultado <= 1.00) classificacao = "alta", mensagi = "Seu índice de RQC indica um alto risco de complicações cardiovasculares. É importante consultar um profissional de saúde para avaliação e orientação adequada."; 
+      else classificacao = "muito alta", mensagi = "Seu índice de RQC mostra um risco muito alto de complicações cardiovasculares. Busque imediatamente aconselhamento médico para iniciar medidas preventivas e de tratamento.";
+    } else if (data.idade >= 50 && data.idade <= 59) {
+      if (resultado < 0.90) classificacao = "baixa", mensagi = "Seu índice de RQC indica um baixo risco de complicações cardiovasculares. Continue mantendo um estilo de vida saudável!";
+      else if (resultado >= 0.90 && resultado <= 0.96) classificacao = "moderada", mensagi = "Seu índice de RQC sugere um risco moderado de complicações cardiovasculares. Considere ajustes na dieta e no exercício para melhorar sua saúde cardiovascular.";
+      else if (resultado > 0.96 && resultado <= 1.02) classificacao = "alta", mensagi = "Seu índice de RQC indica um alto risco de complicações cardiovasculares. É importante consultar um profissional de saúde para avaliação e orientação adequada."; 
+      else classificacao = "muito alta", mensagi = "Seu índice de RQC mostra um risco muito alto de complicações cardiovasculares. Busque imediatamente aconselhamento médico para iniciar medidas preventivas e de tratamento.";
+    } else if (data.idade >= 60 && data.idade <= 69) {
+      if (resultado < 0.91) classificacao = "baixa", mensagi = "Seu índice de RQC indica um baixo risco de complicações cardiovasculares. Continue mantendo um estilo de vida saudável!";
+      else if (resultado >= 0.91 && resultado <= 0.98) classificacao = "moderada", mensagi = "Seu índice de RQC sugere um risco moderado de complicações cardiovasculares. Considere ajustes na dieta e no exercício para melhorar sua saúde cardiovascular.";
+      else if (resultado > 0.98 && resultado <= 1.03) classificacao = "alta", mensagi = "Seu índice de RQC indica um alto risco de complicações cardiovasculares. É importante consultar um profissional de saúde para avaliação e orientação adequada."; 
+      else classificacao = "muito alta", mensagi = "Seu índice de RQC mostra um risco muito alto de complicações cardiovasculares. Busque imediatamente aconselhamento médico para iniciar medidas preventivas e de tratamento.";
     }
-
-    calculatedWeight = parseFloat(calculatedWeight.toFixed(2));
-    document.getElementById("estimated-weight-result").textContent = `Peso estimado: ${calculatedWeight}`;
-    console.log(calculatedWeight)
+  } else if (data.genero === "Feminino") {
+    if (data.idade <= 20 && data.idade <= 29) {
+      if (resultado < 0.71) classificacao = "baixa", mensagi = "Seu índice de RQC indica um baixo risco de complicações cardiovasculares. Continue mantendo um estilo de vida saudável!";
+      else if (resultado >= 0.71 && resultado <= 0.77) classificacao = "moderada", mensagi = "Seu índice de RQC sugere um risco moderado de complicações cardiovasculares. Considere ajustes na dieta e no exercício para melhorar sua saúde cardiovascular.";
+      else if (resultado > 0.77 && resultado <= 0.82) classificacao = "alta", mensagi = "Seu índice de RQC indica um alto risco de complicações cardiovasculares. É importante consultar um profissional de saúde para avaliação e orientação adequada."; 
+      else classificacao = "muito alta", mensagi = "Seu índice de RQC mostra um risco muito alto de complicações cardiovasculares. Busque imediatamente aconselhamento médico para iniciar medidas preventivas e de tratamento.";
+    } else if (data.idade >= 30 && data.idade <= 39) {
+      if (resultado < 0.72) classificacao = "baixa", mensagi = "Seu índice de RQC indica um baixo risco de complicações cardiovasculares. Continue mantendo um estilo de vida saudável!";
+      else if (resultado >= 0.72 && resultado <= 0.78) classificacao = "moderada", mensagi = "Seu índice de RQC sugere um risco moderado de complicações cardiovasculares. Considere ajustes na dieta e no exercício para melhorar sua saúde cardiovascular.";
+      else if (resultado > 0.78 && resultado <= 0.84) classificacao = "alta", mensagi = "Seu índice de RQC indica um alto risco de complicações cardiovasculares. É importante consultar um profissional de saúde para avaliação e orientação adequada."; 
+      else classificacao = "muito alta", mensagi = "Seu índice de RQC mostra um risco muito alto de complicações cardiovasculares. Busque imediatamente aconselhamento médico para iniciar medidas preventivas e de tratamento.";
+    } else if (data.idade >= 40 && data.idade <= 49) {
+      if (resultado < 0.73) classificacao = "baixa", mensagi = "Seu índice de RQC indica um baixo risco de complicações cardiovasculares. Continue mantendo um estilo de vida saudável!";
+      else if (resultado >= 0.73 && resultado <= 0.79) classificacao = "moderada", mensagi = "Seu índice de RQC sugere um risco moderado de complicações cardiovasculares. Considere ajustes na dieta e no exercício para melhorar sua saúde cardiovascular.";
+      else if (resultado > 0.79 && resultado <= 0.87) classificacao = "alta", mensagi = "Seu índice de RQC indica um alto risco de complicações cardiovasculares. É importante consultar um profissional de saúde para avaliação e orientação adequada."; 
+      else classificacao = "muito alta", mensagi = "Seu índice de RQC mostra um risco muito alto de complicações cardiovasculares. Busque imediatamente aconselhamento médico para iniciar medidas preventivas e de tratamento.";
+    } else if (data.idade >= 50 && data.idade <= 59) {
+      if (resultado < 0.74) classificacao = "baixa", mensagi = "Seu índice de RQC indica um baixo risco de complicações cardiovasculares. Continue mantendo um estilo de vida saudável!";
+      else if (resultado >= 0.74 && resultado <= 0.81) classificacao = "moderada", mensagi = "Seu índice de RQC sugere um risco moderado de complicações cardiovasculares. Considere ajustes na dieta e no exercício para melhorar sua saúde cardiovascular.";
+      else if (resultado > 0.81 && resultado <= 0.88) classificacao = "alta", mensagi = "Seu índice de RQC indica um alto risco de complicações cardiovasculares. É importante consultar um profissional de saúde para avaliação e orientação adequada."; 
+      else classificacao = "muito alta", mensagi = "Seu índice de RQC mostra um risco muito alto de complicações cardiovasculares. Busque imediatamente aconselhamento médico para iniciar medidas preventivas e de tratamento.";
+    } else if (data.idade >= 60 && data.idade <= 69) {
+      if (resultado < 0.76) classificacao = "baixa", mensagi = "Seu índice de RQC indica um baixo risco de complicações cardiovasculares. Continue mantendo um estilo de vida saudável!";
+      else if (resultado >= 0.76 && resultado <= 0.83) classificacao = "moderada", mensagi = "Seu índice de RQC sugere um risco moderado de complicações cardiovasculares. Considere ajustes na dieta e no exercício para melhorar sua saúde cardiovascular.";
+      else if (resultado > 0.83 && resultado <= 0.91) classificacao = "alta", mensagi = "Seu índice de RQC indica um alto risco de complicações cardiovasculares. É importante consultar um profissional de saúde para avaliação e orientação adequada."; 
+      else classificacao = "muito alta", mensagi = "Seu índice de RQC mostra um risco muito alto de complicações cardiovasculares. Busque imediatamente aconselhamento médico para iniciar medidas preventivas e de tratamento.";
+    }
+  }
+  document.getElementById("recq-result").textContent = `Sua relação cintura-quadril é ${classificacao}`;
+  document.getElementById("recq-messagi").textContent = `${mensagi}`
+  console.log(resultado, classificacao)
 });
 
 /*IMC*/
@@ -293,10 +324,10 @@ function showRecommendation(doenca) {
       sobre = "Selecione uma doença para ver sobre. "
       message = "As informações sobre as doenças foram obtidas a partir dos renomados livros da coleção Sanar de nutrição."
       trat = "Esta coleção é conhecida por sua abordagem abrangente e baseada em evidências sobre diversos aspectos da nutrição, incluindo doenças relacionadas à alimentação e suas terapias correspondentes."
-      dodo = " "
-      dede = " "
-      didi = " "
-      trata = " "
+      dodo = ""
+      dede = ""
+      didi = ""
+      trata = ""
       break;
     case "anemia":
       message = "A anemia é a falta de hemoglobina no sangue. A hemoglobina, por sua vez, é uma proteína que compõe os glóbulos vermelhos, conhecidos também como hemácias. É ela a responsável pelo transporte de oxigênio no sangue, que chega até os órgãos e tecidos do corpo todo. Em uma pessoa com anemia, alguma disfunção do organismo ou fator externo fazem com que a produção de hemoglobina fique abaixo do considerado normal.";

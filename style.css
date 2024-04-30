@@ -10,7 +10,7 @@
   min-height: 90vh 80vh;
   width: 100%;
   background-image: linear-gradient(#0033ffb3, #000000ca),
-    url("assets/banner.png");
+    url("assets/teste.png");
   opacity: 0.9;
   background-position: center;
   background-size: cover;
@@ -241,7 +241,14 @@ min-height: 60vh;
     font-weight: bold; 
     
   }
-
+  .rcq{
+    border-spacing: 10px 3px;
+    border: 1px solid rgb(255, 0, 0);
+    border-radius: 20px 20px 20px 20px;
+    font-size: 10px;
+    font-weight: bold; 
+    
+  }
 /** Content **/
 .content {
     height: 140px;

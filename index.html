@@ -8,11 +8,11 @@
     <meta charset="utf-8" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="author" content="NutriCalc - TCC" />
+    <meta name="author" content="Leoggm" />
     <meta name="description" content="TCC sobre cálculos nutricionais, contendo calculadora de IMC, TMB e Peso Estimado." />
     <meta property="og:image" content="https://cdn.glitch.global/6af1468b-cb11-4a91-ae86-6c41c33a11e0/pngegg.png?v=1709671873996"/>
     <link rel="icon" href="assets/titulo.png"/>
-    <title>NutriCalc - TCC</title>
+    <title>NutriCalc</title>
     <link rel="stylesheet" href="style.css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -23,15 +23,15 @@
         <nav class="nav-bar">
           <div class="logo">
             <h1 href="#squares">
-              CÁLCULOS <br />
-              NUTRICIONAIS
+              INFORMAÇÕES<br />
+              ANTROPOMÉTRICAS
             </h1>
           </div>
           <div class="nav-list">
             <ul>
               <li class="nav-item"><a href="#" class="nav-link">INÍCIO</a></li>
               <li class="nav-item"><a href="#" class="nav-link" id="bct">IMC</a></li>
-              <li class="nav-item"><a href="#" class="nav-link" id="bct5">PESO ESTIMADO</a>
+              <li class="nav-item"><a href="#" class="nav-link" id="bct5">CINTURA-QUADRIL</a>
               </li><li class="nav-item"> <a href="#" class="nav-link" id="bct7">TMB</a>
               </li><li class="nav-item"><a href="#" class="nav-link" id="bct3">RECOMENDAÇÕES</a></li>
             </ul>
@@ -48,7 +48,7 @@
             <ul>
               <li class="nav-item"><a href="#" class="nav-menu">INÍCIO</a></li>
               <li class="nav-item"><a href="#" class="nav-menu" id="bct2">IMC</a></li>
-              <li class="nav-item"><a href="#" class="nav-menu" id="bct6">PESO ESTIMADO</a></li>
+              <li class="nav-item"><a href="#" class="nav-menu" id="bct6">CINTURA-QUADRIL</a></li>
               <li class="nav-item"><a href="#" class="nav-menu" id="bct8">TMB</a></li>
               <li class="nav-item"><a href="#" class="nav-menu" id="bct4">RECOMENDAÇÕES</a></li>
             </ul>
@@ -57,10 +57,10 @@
       </header>
       <div class="container">
         <div class="col-2">
-          <h2>C á l c u l o sㅤㅤㅤㅤㅤ N u t r i c i o n a i s</h2>
-          <h2 id="cellh2">C a l c u l o s<br />N u t r i c i o n a i s</h2>
+          <h2>C á l c u l o sㅤㅤㅤㅤㅤ A n t r o p o m é t r i c o s</h2>
+          <h2 id="cellh2">C á l c u l o s<br />A n t r o p o m é t r i c o s</h2>
           <h3>_____</h3>
-          <h1>Indice de Massa Corporal, Peso Estimado e Taxa de Metabolismo Basal</h1>
+          <h1>Índice de Massa Corporal, Cintura-Quadril, Taxa de Metabolismo Basal</h1>
         </div>
         <div class="col-img">
           <img src="assets/nutri.png" alt="" />
@@ -199,6 +199,7 @@
         <form id="weight-height">
           <b><label for="gener">Gênero: </label></b><br />
           <select id="gener" name="gener">
+            <option value="nada">ㅤㅤ</option>
             <option value="Masculino">Masculino</option>
             <option value="Feminino">Feminino</option></select><br />
             <b><label for="age">Idade</label><br></b>
@@ -240,106 +241,257 @@
         </form>
       </div>
     </header>
-
-    <!-- PESO ESTIMADO-->
-
     <div class="titulo" id="estim">
       <h3>_____</h3>
-      <h1>Peso Estimado</h1>
+      <h1>Relação Cintura-Quadril</h1>
     </div>
     <div class="empresa">
       <div class="col-3">
         <h2>
-          A avaliação antropométrica é um método utilizado para investigar o
-          estado nutricional de uma pessoa. Um dos métodos utilizados para
-          descobrir o peso de pacientes sem o uso de balanças, é o de peso
-          estimado da Chumlea.
+          A relação cintura-quadril é uma medida que compara a circunferência da cintura com a circunferência dos quadris.
+           Ela é frequentemente usada como um indicador de distribuição de gordura corporal e saúde geral. 
         </h2>
         <h1>
-          Para se calcular o peso estimado, quando o paciente não tiver
-          condições de deambular, seu peso deve ser obtido por estimativa,
-          utilizando as fórmulas de Chumlea e colaboradores, aplicando as
-          medidas da altura do joelho (AJ) e da circunferência do braço (CB).
+          Para calcular a relação cintura-quadril, você divide a circunferência da cintura pela circunferência dos quadris.
+          Geralmente, uma relação cintura-quadril mais baixa é associada a um menor risco de doenças cardiovasculares e metabólicas.
+          No entanto, a relação cintura-quadril é apenas um dos muitos indicadores de saúde e não deve ser considerada isoladamente.
+          Sua fórmula foi desenvolvida por Ansel Keys, em 1940.
         </h1>
       </div>
       <div class="table-estimated-of"><table class="table-estimated" cellpadding="1" cellspacing="1">
 	
-        <tr>
-          <th><strong>Fórmula Chumlea:</strong></th>
+        <thead>
+          <tr>
+            <div class="center"><h3>Classificação</h3></div>
+            <th>Idade</th>
+            <th>Baixo</th>
+            <th>Moderado</th>
+            <th>Alto</th>
+            <th>Muito Alto</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+          <td><b>Homens:</b></td>
+          <td>ㅤ</td>
+          <td>ㅤ</td>
+          <td>ㅤ</td>
+          <td>ㅤ</td>
         </tr>
-      <tr><td><strong>18 a 60 anos:</strong></td></tr>
-        <tr>
-          <td>Homem branco = (AJ x 1,19) + (CB x 3,21) - 86,82</td>
-        </tr>
-        <tr>
-          <td>Homem negro =  (AJ x 1,09) + (CB x 3,14) - 83,72</td>
-        </tr>
-        <tr>
-          <td>Mulher branca =  (AJ x 1,01) + (CB x 2,81) - 60,04</td>
-        </tr>
-        <tr>
-          <td>Mulher negra =  (AJ x 1,24) + (CB x 2,97) - 82,48</td>
-        </tr>
-        <tr>
-          <td><strong>Idosos (acima de 60 anos):</strong></td>
-        </tr>
-        <tr>
-          <td>Homem branco =  (AJ x 1,10) + (CB x 3,07) - 75,81</td>
-        </tr>
-      <tr>
-          <td>Homem negro =  (AJ x 0,44) + (CB x 2,86) - 39,21</td>
-      </tr>
-        <tr>
-          <td>Mulher branca =  (AJ x 1,09) + (CB x 2,68) - 65,51</td>
-      </tr>  <tr>
-          <td>Mulher negra =  (AJ x 1,50) + (CB x 2,58) - 85,22</td>
-      </tr>
+          <tr>
+            <td>20 a 29</td>
+            <td>< 0,83</td>  
+             <td> 0,83 a 0,88</td>
+             <td> 0,89 a 0,94</td>
+            <td>> 0,94</td>
+          </tr>
+          <tr>
+            <td>30 a 39</td>
+            <td>< 0,84</td>
+            <td>0,84 a 0,91</td>
+            <td>0,92 a 0,96</td>
+            <td>> 0,96</td>
+
+          </tr>
+          <tr>
+            <td>40 a 49</td>
+            <td>< 0,88</td>
+            <td>0,88 a 0,95</td>
+            <td>0,95 a 1,00</td>
+            <td>> 1,00</td>
+          </tr>
+          <tr>
+            <td>50 a 59</td>
+            <td>< 0,90</td>
+            <td>0,90 a 0,96</td>
+            <td>0,97 a 1,02</td>
+            <td>> 1,02</td>
+
+          </tr>
+          <tr>
+            <td>60 a 69</td>
+            <td>< 0,91</td>
+            <td>0,91 a 0,98</td>
+            <td>0,99 a 1,03</td>
+            <td>> 1,03</td>
+
+          </tr>
+          <tr>
+            <td><b>Mulheres:</b></td>
+            <td>ㅤ</td>
+            <td>ㅤ</td>
+            <td>ㅤ</td>
+            <td>ㅤ</td>
+          </tr>
+          <tr>
+            <td>20 a 29</td>
+            <td>< 0,71</td>  
+             <td> 0,71 a 0,77</td>
+             <td> 0,78 a 0,82</td>
+            <td>> 0,82</td>
+          </tr>
+          <tr>
+            <td>30 a 39</td>
+            <td>< 0,72</td>
+            <td>0,72 a 0,78</td>
+            <td>0,79 a 0,84</td>
+            <td>> 0,84</td>
+
+          </tr>
+          <tr>
+            <td>40 a 49</td>
+            <td>< 0,73</td>
+            <td>0,73 a 0,79</td>
+            <td>0,80 a 0,87</td>
+            <td>> 0,87</td>
+          </tr>
+          <tr>
+            <td>50 a 59</td>
+            <td>< 0,74</td>
+            <td>0,74 a 0,81</td>
+            <td>0,83 a 0,88</td>
+            <td>> 0,88</td>
+
+          </tr>
+          <tr>
+            <td>60 a 69</td>
+            <td>< 0,76</td>
+            <td>0,76 a 0,83</td>
+            <td>00,84 a 0,90</td>
+            <td>> 0,90</td>
+
+          </tr>
+        </tbody>
       
      
-    </table><p>AJ = Altura do Joelho em cm<br>
-    CB = Circunferência do braço em cm</p></div>
+    </table><br>
+  
+  </div>
     
     </div>
     <div class="infos">
       <div class="card">
-        <!-- ICON -->
         <div class="icon">
-          <div class="tabela-est">
-           <h4 style="text-align: center;"> FÓRMULA:</h4><br>
-            <h5>18 a 60 anos:</h5>
-<p>Homem branco = (AJ x 1,19) + (CB x 3,21) - 86,82<br>
-Homem negro =  (AJ x 1,09) + (CB x 3,14) - 83,72<br>
-Mulher branca =  (AJ x 1,01) + (CB x 2,81) - 60,04<br>
-Mulher negra =  (AJ x 1,24) + (CB x 2,97) - 82,48<br></p>
-<br>
-<h5>Idosos (acima de 60 anos):</h5>
-<p>Homem branco =  (AJ x 1,10) + (CB x 3,07) - 75,81<br>
-Homem negro =  (AJ x 0,44) + (CB x 2,86) - 39,21<br>
-Mulher branca =  (AJ x 1,09) + (CB x 2,68) - 65,51<br>
-Mulher negra =  (AJ x 1,50) + (CB x 2,58) - 85,22<br>
+          <table class="rcq" cellpadding="1" cellspacing="1">
+        <thead>
+          <tr>
+            <div class="center"><h3>Classificação</h3></div>
+            <th>Idade</th>
+            <th>Baixo</th>
+            <th>Moderado</th>
+            <th>Alto</th>
+            <th>Muito Alto</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+          <td><b>Homens:</b></td>
+          <td>ㅤ</td>
+          <td>ㅤ</td>
+          <td>ㅤ</td>
+          <td>ㅤ</td>
+        </tr>
+          <tr>
+            <td>20 a 29</td>
+            <td>-0,83</td>  
+             <td> 0,83 a 0,88</td>
+             <td> 0,89 a 0,94</td>
+            <td>+0,94</td>
+          </tr>
+          <tr>
+            <td>30 a 39</td>
+            <td>-0,84</td>
+            <td>0,84 a 0,91</td>
+            <td>0,92 a 0,96</td>
+            <td>+0,96</td>
 
-<br><br>AJ = Altura do Joelho em cm<br>
-CB = Circunferência do braço em cm</p>
-</div>
+          </tr>
+          <tr>
+            <td>40 a 49</td>
+            <td>-0,88</td>
+            <td>0,88 a 0,95</td>
+            <td>0,95 a 1,00</td>
+            <td>+1,00</td>
+          </tr>
+          <tr>
+            <td>50 a 59</td>
+            <td>-0,90</td>
+            <td>0,90 a 0,96</td>
+            <td>0,97 a 1,02</td>
+            <td>+1,02</td>
+
+          </tr>
+          <tr>
+            <td>60 a 69</td>
+            <td>-0,91</td>
+            <td>0,91 a 0,98</td>
+            <td>0,99 a 1,03</td>
+            <td>+1,03</td>
+
+          </tr>
+          <tr>
+            <td><b>Mulheres:</b></td>
+            <td>ㅤ</td>
+            <td>ㅤ</td>
+            <td>ㅤ</td>
+            <td>ㅤ</td>
+          </tr>
+          <tr>
+            <td>20 a 29</td>
+            <td>-0,71</td>  
+             <td>0,71 a 0,77</td>
+             <td>0,78 a 0,82</td>
+            <td>+0,82</td>
+          </tr>
+          <tr>
+            <td>30 a 39</td>
+            <td>-0,72</td>
+            <td>0,72 a 0,78</td>
+            <td>0,79 a 0,84</td>
+            <td>+0,84</td>
+
+          </tr>
+          <tr>
+            <td>40 a 49</td>
+            <td>-0,73</td>
+            <td>0,73 a 0,79</td>
+            <td>0,80 a 0,87</td>
+            <td>+0,87</td>
+          </tr>
+          <tr>
+            <td>50 a 59</td>
+            <td>-0,74</td>
+            <td>0,74 a 0,81</td>
+            <td>0,83 a 0,88</td>
+            <td>+0,88</td>
+
+          </tr>
+          <tr>
+            <td>60 a 69</td>
+            <td>-0,76</td>
+            <td>0,76 a 0,83</td>
+            <td>00,84 a 0,90</td>
+            <td>+0,90</td>
+
+          </tr>
+        </tbody>
+    </table>
         </div>
 
-        <!-- CONTENT -->
         <div class="content">
-            <h3>PESO ESTIMADO</h3>
+            <h3>CINTURA-QUADRIL</h3>
             <h1>
-                A avaliação antropométrica é um método utilizado para investigar o
-                estado nutricional de uma pessoa. Um dos métodos utilizados para
-                descobrir o peso de pacientes sem o uso de balanças, é o de peso
-                estimado da Chumlea.<br><br>
-                Para se calcular o peso estimado, quando o paciente não tiver
-                condições de deambular, seu peso deve ser obtido por estimativa,
-                utilizando as fórmulas de Chumlea e colaboradores, aplicando as
-                medidas da altura do joelho (AJ) e da circunferência do braço (CB).
+             
+                A relação cintura-quadril é uma medida que compara a circunferência da cintura com a circunferência dos quadris.
+                 Ela é frequentemente usada como um indicador de distribuição de gordura corporal e saúde geral. 
+           <br><br>
+                Para calcular a relação cintura-quadril, você divide a circunferência da cintura pela circunferência dos quadris.
+                Geralmente, uma relação cintura-quadril mais baixa é associada a um menor risco de doenças cardiovasculares e metabólicas.
+                No entanto, a relação cintura-quadril é apenas um dos muitos indicadores de saúde e não deve ser considerada isoladamente.
+                Sua fórmula foi desenvolvida por Ansel Keys, em 1940.
               </h1>
-            </h1>
         </div>
 
-        <!-- READ MORE/LESS BUTTON -->
         <button id="read_button">Ler mais</button>
     </div>
   </div>
@@ -349,32 +501,30 @@ CB = Circunferência do braço em cm</p>
       </div>
       <div class="square top-left">
         <br />
-        <h2>Peso Estimado</h2>
+        <h2>CINTURA-QUADRIL</h2>
         <br />
-        <form id="estimated-weight-form">
-          <b><label for="genero">Gênero: </label></b><br />
-          <select id="genero" name="genero">
+        <form id="rcq-form">
+          <b><label for="generor">Gênero: </label></b><br />
+          <select id="generor" name="generor">
+            <option value="nada">ㅤㅤ</option>
             <option value="Masculino">Masculino</option>
             <option value="Feminino">Feminino</option></select><br />
-          <b><label for="etnia">Etnia:</label></b> <br />
-          <select id="etnia" name="etnia">
-            <option value="Branco(a)">Branco(a)</option>
-            <option value="Negro(a)">Negro(a)</option></select><br />
-          <b> <label for="idade">Idade:</label></b><br />
-          <input type="number" id="idade" name="idade" min="0" max="500" oninvalid="this.setCustomValidity('Tente usar um número maior que 0, sem ponto ou vírgula. Se preciso, arredonde.')" required/><br />
-          <b> <label for="aj">Altura do Joelho:</label></b> <br />
-          <input type="number" id="aj" name="aj"  min="0" max="500" oninvalid="this.setCustomValidity('Tente usar um número maior que 0, sem ponto ou vírgula. Se preciso, arredonde.')" required/><br />
-          <b> <label for="cb">Circunferência do Braço:</label></b> <br />
-          <input type="number" id="cb" name="cb" min="0" max="500" oninvalid="this.setCustomValidity('Tente usar um número maior que 0, sem ponto ou vírgula. Se preciso, arredonde.')" required/><br />
+          <b> <label for="idade-rcq">Idade:</label></b><br />
+          <input type="number" id="idade-rcq" name="idade-rcq" min="0" max="500" oninvalid="this.setCustomValidity('Tente usar um número maior que 0, sem ponto ou vírgula. Se preciso, arredonde.')" required/><br />
+          <b> <label for="cq">Circunferência da Cintura:</label></b> <br />
+          <input type="number" id="cc" name="cc"  min="0" max="500" oninvalid="this.setCustomValidity('Tente usar um número maior que 0, sem ponto ou vírgula. Se preciso, arredonde.')" required/><br />
+          <b> <label for="cc">Circunferência do Quadril:</label></b> <br />
+          <input type="number" id="cq" name="cq" min="0" max="500" oninvalid="this.setCustomValidity('Tente usar um número maior que 0, sem ponto ou vírgula. Se preciso, arredonde.')" required/><br />
           <header class="header2">
             <div class="lgpd">
               <div id="tmb">
               <button type="submit" id="open" class="btn-popup">Calcular &#10140;</button>              <div class="aviso">
-                <h3>OBS: AJ e CB em centímetros! Sem vírgula ou ponto.</h3> </div>
+                <h3>OBS: Números em centímetros! Sem vírgula ou ponto.</h3> </div>
               <div class="modal-container" id="modal_container">
                 <div class="modal">
                   <div class="center">RESULTADO:
-                  <p id="estimated-weight-result"></p>
+                  <p id="recq-result"></p>
+                  <p id="recq-messagi"></p>
                   <button id="close" class="close-popup">Sair</button>   </div>
                 </div>
               </div>
@@ -511,6 +661,7 @@ Extremamente ativo: TMB x 1.9
         <form id="tmb-form">
           <b><label for="gene">Gênero: </label></b> <br />
           <select id="gene" name="gene">
+            <option value="nada">ㅤㅤ</option>
             <option value="Masculino">Masculino</option>
             <option value="Feminino">Feminino</option></select><br />
           <b> <label for="idad">Idade:</label></b> <br />
@@ -573,10 +724,8 @@ Extremamente ativo: TMB x 1.9
            </select><br />
           </form>
           <div class="contents">
-              <h3 id="recomendat"></h3>
+              <h3 id="recomendat">Selecione uma doença para ver sobre.</h3>
                 <h1 id="recommendation-message">
-                  Selecione uma doença para ver sobre.<br><br>
-                  
                   As informações sobre as doenças foram obtidas a partir dos renomados livros da coleção Sanar de nutrição.
                   
                   <br><Br>Esta coleção é conhecida por sua abordagem abrangente e baseada em evidências sobre diversos aspectos da nutrição,
@@ -588,7 +737,6 @@ Extremamente ativo: TMB x 1.9
               <img id="imag">
               <img id="imag2">
               <img id="imag3">
-              
               </div>
           </div>
       </div>
