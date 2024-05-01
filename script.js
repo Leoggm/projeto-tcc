@@ -383,6 +383,24 @@ function showRecommendation(doenca) {
       dede = "assets/hiper2.png"
       didi = "assets/hiper3.png"
     break;
+    case "hipo":
+      message = "O hipotireoidismo é um problema na tireoide (glândula que regula a função de órgãos importantes como o coração, o cérebro, o fígado e os rins), que se caracteriza pela queda na produção dos hormônios T3 (triiodotironina) e T4 (tiroxina). É mais comum em mulheres, mas pode acometer qualquer pessoa. Isso pode levar a uma variedade de sintomas, incluindo fadiga, ganho de peso, sensação de frio, pele seca e constipação."
+      trat = "É fundamental manter uma dieta balanceada e saudável, priorizando os alimentos fonte de fibras, antioxidantes e minerais, como iodo, selênio, zinco e cobre, incluindo: Alimentos fonte de iodo, como algas marinhas, sal iodado, frutos do mar, leite e derivados."
+      trata = "TRATAMENTO"
+      sobre = "SOBRE"
+      dodo = "assets/tireoide1.png"
+      dede = "assets/tireoide3.png"
+      didi = "assets/tireoide2.png"
+      break;
+    case "cardio":
+      message = "As doenças cardiovasculares abrangem uma série de condições que afetam o coração e os vasos sanguíneos, incluindo a doença coronariana, doença cerebrovascular, doença arterial periférica, cardiopatia congênita, entre outras. Ataques cardíacos e acidentes vasculares cerebrais são frequentemente causados por bloqueios que impedem o fluxo sanguíneo para o coração ou cérebro, sendo o acúmulo de depósitos de gordura nas paredes dos vasos sanguíneos uma das principais razões para isso. Fatores de risco incluem tabagismo, dieta inadequada, obesidade, sedentarismo, uso nocivo do álcool, hipertensão, diabetes e hiperlipidemia."
+      trat = "É muito importante estarmos cientes dos riscos e complicações relacionados às doenças cardiovasculares. Manter um estilo de vida saudável, com alimentação balanceada e a prática regular de exercícios físicos, pode ajudar a reduzir esses riscos. Além disso, é fundamental realizar check-ups médicos regularmente para monitorar a saúde do coração e dos vasos sanguíneos."
+      trata = "TRATAMENTO"
+      sobre = "SOBRE"
+      dodo = "assets/cardio1.png"
+      dede = "assets/cardio2.png"
+      didi = "assets/cardio3.png"
+      break;
     default:
       message = "Selecione uma doença para ver a recomendação.";
     
