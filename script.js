@@ -201,14 +201,14 @@ document
   .querySelector(".nav-item a.nav-link#bct3")
   .addEventListener("click", (e) => {
     e.preventDefault();
-    const targetSection = document.querySelector("#recomend");
+    const targetSection = document.querySelector("#recomendada");
     targetSection.scrollIntoView({ behavior: "smooth" });
   });
 document
   .querySelector(".mobile-menu a.nav-menu#bct4")
   .addEventListener("click", (e) => {
     e.preventDefault();
-    const targetSection = document.querySelector("#recomend");
+    const targetSection = document.querySelector("#recomendada");
     targetSection.scrollIntoView({ behavior: "smooth" });
   });
 document
@@ -413,4 +413,3 @@ function showRecommendation(doenca) {
   document.getElementById("imag2").src = dede;
   document.getElementById("imag3").src = didi;
   }
-
