@@ -1,11 +1,7 @@
-User-agent: *
-Disallow: /
-
-User-agent: *
-Disallow: /assets/
-
 User-agent: Googlebot
-Disallow: /assets/
+Disallow: /nogooglebot/
 
-User-agent: Bingbot
-Disallow: /assets/
+User-agent: *
+Allow: /   
+
+Sitemap: https://www.mesalvanutri.com.br/sitemap.xml
