@@ -71,6 +71,18 @@ document.getElementById("rcq-form").addEventListener("submit", async (event) => 
   document.getElementById("recq-result").textContent = `Sua relação cintura-quadril é ${classificacao}`;
   document.getElementById("recq-messagi").textContent = `${mensagi}`
   console.log(resultado, classificacao)
+
+  const open = document.getElementById("open");
+  const modal_container = document.getElementById("modal_container");
+  const close = document.getElementById("close");
+
+open.addEventListener("click", () => {
+  modal_container.classList.add("show");
+});
+
+close.addEventListener("click", () => {
+  modal_container.classList.remove("show");
+});
 });
 
 /*IMC*/
@@ -79,17 +91,12 @@ document
   .getElementById("weight-height")
   .addEventListener("submit", async (event) => {
     event.preventDefault();
+    
+  let weight = document.getElementById("weight").value.replace(',', '.');
+  let height = document.getElementById("height").value.replace(',', '.');
 
-    const weight = document.getElementById("weight").value;
-    const height = document.getElementById("height").value;
-    const age = document.getElementById("age").value;
-    const gener = document.getElementById("gener").value;
-
-    if (!weight || !height) {
-      document.getElementById("weight-height-result").textContent =
-        "Peso e altura são necessários.";
-      return;
-    }
+  weight = parseFloat(weight);
+  height = parseFloat(height);
 
     let result1 = weight / (height * height);
     let result = result1 * 10000;
@@ -133,6 +140,19 @@ document
     document.getElementById("weight-height-result").textContent = `IMC: ${result} - (${classification})`;
     document.getElementById("ideal-weight-result").textContent = `Peso Ideal: ${idealmin}kg - ${ideal}kg`;
     document.getElementById("recomendasao").textContent = `${recomend}`;
+
+    const openAgeHeight = document.getElementById("open-weight-height");
+    const modalContainerAgeHeight = document.getElementById("modal_container_weight-height");
+    const closeAgeHeight = document.getElementById("close-weight-height");
+    
+    openAgeHeight.addEventListener("click", () => {
+    modalContainerAgeHeight.classList.add("show");
+});
+
+   closeAgeHeight.addEventListener("click", () => {
+   modalContainerAgeHeight.classList.remove("show");
+});
+
 });
 
 
@@ -165,6 +185,18 @@ document
 
     document.getElementById("estimatedtmb-result").innerHTML = `Sua taxa de Metabolismo Basal é de: <u>${calculatedtmb}</u> calorias e seu gasto é de <u>${finalact}</u> calorias em média.`;
     console.log(calculatedtmb);
+
+const openTmb = document.getElementById("open-tmb");
+const modalContainerTmb = document.getElementById("modal_container_tmb");
+const closeTmb = document.getElementById("close-tmb");
+
+openTmb.addEventListener("click", () => {
+  modalContainerTmb.classList.add("show");
+});
+
+closeTmb.addEventListener("click", () => {
+  modalContainerTmb.classList.remove("show");
+});
   });
 
 /*Menu Celular*/
@@ -240,44 +272,6 @@ document
     targetSection.scrollIntoView({ behavior: "smooth" });
   });
 
-/*POP UP DOS RESULTADOS*/
-
-const open = document.getElementById("open");
-const modal_container = document.getElementById("modal_container");
-const close = document.getElementById("close");
-
-open.addEventListener("click", () => {
-  modal_container.classList.add("show");
-});
-
-close.addEventListener("click", () => {
-  modal_container.classList.remove("show");
-});
-
-const openTmb = document.getElementById("open-tmb");
-const modalContainerTmb = document.getElementById("modal_container_tmb");
-const closeTmb = document.getElementById("close-tmb");
-
-openTmb.addEventListener("click", () => {
-  modalContainerTmb.classList.add("show");
-});
-
-closeTmb.addEventListener("click", () => {
-  modalContainerTmb.classList.remove("show");
-});
-const openAgeHeight = document.getElementById("open-weight-height");
-const modalContainerAgeHeight = document.getElementById(
-  "modal_container_weight-height"
-);
-const closeAgeHeight = document.getElementById("close-weight-height");
-
-openAgeHeight.addEventListener("click", () => {
-  modalContainerAgeHeight.classList.add("show");
-});
-
-closeAgeHeight.addEventListener("click", () => {
-  modalContainerAgeHeight.classList.remove("show");
-});
 
 //BOTÃO DE LER MAIS
 
@@ -393,8 +387,8 @@ function showRecommendation(doenca) {
       didi = "assets/tireoide2.png"
       break;
     case "cardio":
-      message = "As doenças cardiovasculares abrangem uma série de condições que afetam o coração e os vasos sanguíneos, incluindo a doença coronariana, doença cerebrovascular, doença arterial periférica, cardiopatia congênita, entre outras. Ataques cardíacos e acidentes vasculares cerebrais são frequentemente causados por bloqueios que impedem o fluxo sanguíneo para o coração ou cérebro, sendo o acúmulo de depósitos de gordura nas paredes dos vasos sanguíneos uma das principais razões para isso. Fatores de risco incluem tabagismo, dieta inadequada, obesidade, sedentarismo, uso nocivo do álcool, hipertensão, diabetes e hiperlipidemia."
-      trat = "É muito importante estarmos cientes dos riscos e complicações relacionados às doenças cardiovasculares. Manter um estilo de vida saudável, com alimentação balanceada e a prática regular de exercícios físicos, pode ajudar a reduzir esses riscos. Além disso, é fundamental realizar check-ups médicos regularmente para monitorar a saúde do coração e dos vasos sanguíneos."
+      message = "As doenças cardiovasculares abrangem uma série de condições que afetam o coração e os vasos sanguíneos. Ataques cardíacos e acidentes vasculares cerebrais são frequentemente causados por bloqueios que impedem o fluxo sanguíneo para o coração ou cérebro, sendo o acúmulo de depósitos de gordura nas paredes dos vasos sanguíneos uma das principais razões para isso. Fatores de risco incluem tabagismo, dieta inadequada, obesidade, sedentarismo, uso nocivo do álcool, hipertensão, diabetes e hiperlipidemia."
+      trat = "É muito importante estarmos cientes dos riscos e complicações relacionados às doenças cardiovasculares. Manter um estilo de vida saudável, com a prática regular de exercícios físicos, e uma alimentação balanceada, evitando frituras, industrializados, doces em excessos e  o consumo diário de verduras, legumes e frutas podem contribuir para uma alimentação mais saudável. Além disso, é fundamental realizar check- ups médicos regularmente para monitorar a saúde do coração e dos vasos sanguíneos."
       trata = "TRATAMENTO"
       sobre = "SOBRE"
       dodo = "assets/cardio1.png"

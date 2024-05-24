@@ -9,10 +9,10 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="Leoggm" />
-    <meta name="description" content="TCC sobre cálculos nutricionais, contendo calculadora de IMC, TMB e Peso Estimado." />
+    <meta name="description" content="TCC sobre cálculos antropométricos, contendo calculadoras e recomendações nutricionais." />
     <meta property="og:image" content="https://cdn.glitch.global/6af1468b-cb11-4a91-ae86-6c41c33a11e0/pngegg.png?v=1709671873996"/>
     <link rel="icon" href="assets/titulo.png"/>
-    <title>NutriCalc</title>
+    <title>Me Salva Nutri - Cálculos antropométricos e recomendações nutricionais.</title>
     <link rel="stylesheet" href="style.css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -203,11 +203,11 @@
             <option value="Masculino">Masculino</option>
             <option value="Feminino">Feminino</option></select><br />
             <b><label for="age">Idade</label><br></b>
-            <input type="number" id="age" name="age" min="0" max="500" oninvalid="this.setCustomValidity('Tente usar um número maior que 10, sem ponto ou vírgula. Se preciso, arredonde.')" required/><br />
+            <input type="number" id="age" name="age"required /><br />
           <b><label for="weight">Peso:</label><br /></b>
-          <input type="number" id="weight" name="weight" min="0" max="500"  oninvalid="this.setCustomValidity('Tente usar um número maior que 0, sem ponto ou vírgula. Se preciso, arredonde.')" required/><br />
+          <input type="number" id="weight" name="weight"required/><br />
           <b> <label for="height">Altura:</label><br /></b>
-          <input type="number" id="height" name="height" min="0" max="500" oninvalid="this.setCustomValidity('Tente usar um número maior que 0, sem ponto ou vírgula. Se preciso, arredonde.')" required/><br />
+          <input type="number" id="height" name="height"required/><br />
           <header class="header2">
             <div class="lgpd">
               <button type="submit" id="open-weight-height" class="btn-popup">Calcular &#10140;</button>
@@ -510,11 +510,11 @@
             <option value="Masculino">Masculino</option>
             <option value="Feminino">Feminino</option></select><br />
           <b> <label for="idade-rcq">Idade:</label></b><br />
-          <input type="number" id="idade-rcq" name="idade-rcq" min="0" max="500" oninvalid="this.setCustomValidity('Tente usar um número maior que 0, sem ponto ou vírgula. Se preciso, arredonde.')" required/><br />
+          <input type="number" id="idade-rcq" name="idade-rcq"required/><br />
           <b> <label for="cq">Circunferência da Cintura:</label></b> <br />
-          <input type="number" id="cc" name="cc"  min="0" max="500" oninvalid="this.setCustomValidity('Tente usar um número maior que 0, sem ponto ou vírgula. Se preciso, arredonde.')" required/><br />
+          <input type="number" id="cc" name="cc" required/><br />
           <b> <label for="cc">Circunferência do Quadril:</label></b> <br />
-          <input type="number" id="cq" name="cq" min="0" max="500" oninvalid="this.setCustomValidity('Tente usar um número maior que 0, sem ponto ou vírgula. Se preciso, arredonde.')" required/><br />
+          <input type="number" id="cq" name="cq"required/><br />
           <header class="header2">
             <div class="lgpd">
               <div id="tmb">
@@ -663,11 +663,11 @@
             <option value="Masculino">Masculino</option>
             <option value="Feminino">Feminino</option></select><br />
           <b> <label for="idad">Idade:</label></b> <br />
-          <input type="number" id="idad" name="idad"  min="0" max="500" required/><br />
+          <input type="number" id="idad" name="idad" required/><br />
           <b> <label for="alt">Altura:</label></b> <br />
-          <input type="number" id="alt" name="alt" min="0" max="500" oninvalid="this.setCustomValidity('Tente usar um número maior que 0, sem ponto ou vírgula. Se preciso, arredonde.')" required /><br>
+          <input type="number" id="alt" name="alt" required/><br>
           <b> <label for="pes">Peso:</label></b>  <br />
-          <input  type="number" id="pes" name="pes"  min="0" max="500" oninvalid="this.setCustomValidity('Tente usar um número maior que 0, sem ponto ou vírgula. Se preciso, arredonde.')" required/><br />
+          <input  type="number" id="pes" name="pes" required/><br />
           <b><label for="activity">Nível de Atividade: </label></b> <br />
           <select id="activity" name="activity">
             <option value="1.2">Sedentário</option>
