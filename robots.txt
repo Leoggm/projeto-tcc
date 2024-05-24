@@ -1,0 +1,11 @@
+User-agent: *
+Disallow: /
+
+User-agent: *
+Disallow: /assets/
+
+User-agent: Googlebot
+Disallow: /assets/
+
+User-agent: Bingbot
+Disallow: /assets/
