@@ -334,7 +334,7 @@ function showRecommendation(doenca) {
       break;
     case "desnutri":
       message = "A desnutrição é caracterizada pela deficiência de energia, proteína e outros nutrientes, resultando em alterações físicas, teciduais, funcionais e clínicas. Isso abrange tanto a falta de energia e proteínas quanto a carência de micronutrientes e outros nutrientes essenciais. A progressão da desnutrição pode envolver mudanças físicas, hormonais e hematológicas, além de complicações graves que podem levar à morte.";
-      trat = "Na terapia nutricional para desnutrição, um aumento de 500 a 1000 kcal é recomendado. Na terapia enteral, começa-se com 20 kcal/h no primeiro dia, aumentando gradualmente para atender às necessidades diárias. A realimentação agressiva pode levar à Síndrome da Realimentação, uma condição potencialmente fatal de desequilíbrio ao ganhar peso. Na fase de reabilitação, administra-se 3 a 4mg/kg de peso/dia do mineral por via oral para evitar complicações, como o agravamento de infecções."
+      trat = "Para tratar a desnutrição, é importante aumentar a ingestão de alimentos ricos em calorias, proteínas, vitaminas e minerais. Recomendações incluem consumir mais proteínas magras (como peixes, frango, ovos), carboidratos complexos (como grãos integrais), frutas, vegetais e gorduras saudáveis (como as encontradas em abacates e nozes). Consultar um nutricionista é fundamental para um plano personalizado."
       dodo = "assets/desnutri.png"
       dede = "assets/desnutri2.png"
       didi = "assets/desnutri3.png"
@@ -342,8 +342,8 @@ function showRecommendation(doenca) {
       sobre = "SOBRE"
       break;
     case "diabetes":
-      message = "Diabetes mellitus tipo 2 é uma doença metabólica crônica caracterizada por valores elevados de glicose no sangue; a hiperglicemia. A doença se desenvolve pelo comprometimento progressivo da produção de insulina pelas células pancreáticas tipo beta e pela resistência a ação do hormônio em órgãos como fígado e músculo. "
-      trat = "O tratamento da doença é de extrema importância, pois a hiperglicemia, a longo prazo, pode ocasionar complicações, principalmente cardiovasculares, renais, comprometimento neurológico e ocular. Para tratar a diabetes é necessário uso de medicamentos que auxiliam no controle da glicemia e ter um estilo de vida saudável, baseado na prática regular de exercícios físicos e alimentação balanceada. Outros pontos importantes são: sono adequado, reduzir estresse e ter atividades de lazer com frequência. É fundamental também a vigilância e controle intensivo de outros fatores como o colesterol e a pressão arterial."
+      message = "Diabetes mellitus tipo 2 é uma doença metabólica crônica caracterizada por valores elevados de glicose no sangue; a hiperglicemia. A doença se desenvolve pelo comprometimento progressivo da produção de insulina pelas células pancreáticas tipo beta e pela resistência a ação do hormônio em órgãos como fígado e músculo. O tratamento da doença é de extrema importância, pois a hiperglicemia, a longo prazo, pode ocasionar complicações, principalmente cardiovasculares, renais, comprometimento neurológico e ocular."
+      trat = "Para o tratamento da diabetes, recomenda-se evitar frituras e alimentos ricos em gordura saturada e trans; Alimentos ricos em sódio (sal); Doces, balas, bolos, sorvetes e produtos ricos em açúcar. A atividade física pode melhorar seus níveis de glicose, baixar a pressão, melhorar o fluxo sanguíneo e ajuda a manter o peso. Outros pontos importantes são: sono adequado, reduzir estresse e ter atividades de lazer com frequência."
       trata = "TRATAMENTO"
       sobre = "SOBRE"
       dodo = "assets/diabetes1.png"
@@ -369,8 +369,8 @@ function showRecommendation(doenca) {
       didi = "assets/gastrite3.png"
     break;
     case "hiper":
-      message = "Hipertensão (pressão alta) é uma doença democrática que acomete crianças, adultos e idosos, homens e mulheres de todas as classes sociais e condições financeiras. Popularmente conhecida como “pressão alta”, está relacionada com a força que o sangue faz contra as paredes das artérias para conseguir circular por todo o corpo. O estreitamento das artérias aumenta a necessidade de o coração bombear com mais força para impulsionar o sangue e recebê-lo de volta. Como consequência, a hipertensão dilata o coração e danifica as artérias."
-      trat = "O objetivo do tratamento deve ser não deixar a pressão ultrapassar os valores de 12 por 8. Nos casos de hipertensão leve, com a mínima entre 9 e 10, tenta-se primeiro o tratamento não medicamentoso, que é muito importante e envolve mudanças nos hábitos de vida. A pessoa precisa praticar exercícios físicos, não exagerar no sal e na bebida alcoólica, controlar o estresse e o peso, levar vida saudável."
+      message = "Hipertensão (pressão alta) é uma doença não transmissível e está relacionada com a força que o sangue faz contra as paredes das artérias para conseguir circular por todo o corpo. O estreitamento das artérias aumenta a necessidade de o coração bombear com mais força para impulsionar o sangue e recebê-lo de volta. Como consequência, a hipertensão dilata o coração e danifica as artérias. Por esse motivo, modificações no estilo de vida são importantes para o tratamento, diminuição dos riscos e na prevenção da hipertensão."
+      trat = "Consuma diariamente frutas, verduras, legumes e a quantidade de água adequada; prefira aves e peixes ao invés de carne vermelha. também é muito importante evitar tabagismo, bebidas alcoólicas, alimentos embutidos. Além disso, é muito importante Manter uma rotina de atividade física com orientação profissional."
       trata = "TRATAMENTO"
       sobre = "SOBRE"
       dodo = "assets/hiper1.png"
@@ -395,7 +395,16 @@ function showRecommendation(doenca) {
       dede = "assets/cardio2.png"
       didi = "assets/cardio3.png"
       break;
-    default:
+    case "obesi":
+      message = "A obesidade é definida como o acúmulo excessivo ou anormal da gordura ou tecido adiposo no corpo, é considerada fator de risco para uma série de outros problemas, como doenças cardiovasculares, diabetes e hipertensão. Uma dieta desbalanceada e o sedentarismo estão relacionados com o desenvolvimento dessa doença. Infelizmente, a obesidade está aumentando cada vez mais e permeando todas as idades, se tornando uma verdadeira crise de saúde em todo o mundo. Para isso, é necessário mais cuidado e modificações no estilo de vida, para previnir ou tratar o desenvolvimento da obesidade."
+      trat = "Mudar hábitos alimentares é fundamental para perder e manter seu peso, por isso, é recomendado o consumo diário de frutas, verduras e legumes; evite alimentos e bebidas que tenham açúcar, alimentos ultraprocessado e pratique regularmente atividade física, com orientação de um profissional. É muito importante também entender os fatores que te trouxeram até seu estado atual e buscar ajuda de outros profissionais, como médicos e psicólogos."
+      trata = "TRATAMENTO"
+      sobre = "SOBRE"
+      dodo = "assets/obesidade1.png"
+      dede = "assets/obesidade2.png"
+      didi = "assets/obesidade3.png"
+      break;  
+      default:
       message = "Selecione uma doença para ver a recomendação.";
     
   }
