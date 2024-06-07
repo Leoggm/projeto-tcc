@@ -14,7 +14,7 @@ document.getElementById("rcq-form").addEventListener("submit", async (event) => 
 
   let classificacao;
   if (data.genero === "Masculino") {
-    if (data.idade <= 20 && data.idade <= 29) {
+    if (data.idade >= 20 && data.idade <= 29) {
       if (resultado < 0.83) classificacao = "baixa", mensagi = "Seu índice de RQC indica um baixo risco de complicações cardiovasculares. Continue mantendo um estilo de vida saudável!";
       else if (resultado >= 0.83 && resultado <= 0.88) classificacao = "moderada", mensagi = "Seu índice de RQC sugere um risco moderado de complicações cardiovasculares. Considere ajustes na dieta e no exercício para melhorar sua saúde cardiovascular.";
       else if (resultado > 0.88 && resultado <= 0.94) classificacao = "alta", mensagi = "Seu índice de RQC indica um alto risco de complicações cardiovasculares. É importante consultar um profissional de saúde para avaliação e orientação adequada.";
@@ -41,7 +41,7 @@ document.getElementById("rcq-form").addEventListener("submit", async (event) => 
       else classificacao = "muito alta", mensagi = "Seu índice de RQC mostra um risco muito alto de complicações cardiovasculares. Busque imediatamente aconselhamento médico para iniciar medidas preventivas e de tratamento.";
     }
   } else if (data.genero === "Feminino") {
-    if (data.idade <= 20 && data.idade <= 29) {
+    if (data.idade >= 20 && data.idade <= 29) {
       if (resultado < 0.71) classificacao = "baixa", mensagi = "Seu índice de RQC indica um baixo risco de complicações cardiovasculares. Continue mantendo um estilo de vida saudável!";
       else if (resultado >= 0.71 && resultado <= 0.77) classificacao = "moderada", mensagi = "Seu índice de RQC sugere um risco moderado de complicações cardiovasculares. Considere ajustes na dieta e no exercício para melhorar sua saúde cardiovascular.";
       else if (resultado > 0.77 && resultado <= 0.82) classificacao = "alta", mensagi = "Seu índice de RQC indica um alto risco de complicações cardiovasculares. É importante consultar um profissional de saúde para avaliação e orientação adequada."; 
