@@ -750,6 +750,29 @@
     <div class="dados">
     <h7>Dados obtidos através da Coleção Sanar de Nutrição</h7>
   </div>
+
+  <div class="FeedbackContainer">
+    <h2>Deixe seu Feedback</h2>
+    <form id="feedbackForm" action="https://docs.google.com/forms/d/e/SEU_ID_DE_FORMULARIO/formResponse" method="POST">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="entry.1234567890" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="entry.0987654321" required>
+
+        <label for="feedback">Feedback:</label>
+        <textarea id="feedback" name="entry.1122334455" required></textarea>
+
+        <button type="submit">Enviar</button>
+
+        <div id="mensagemSucesso" class="oculto">
+            Obrigado pelo seu feedback!
+        </div>
+        <div id="mensagemErro" class="oculto">
+            Ocorreu um erro ao enviar o formulário. Por favor, tente novamente.
+        </div>
+    </form>
+</div>
     <!-- RODAPÉ -->
 
     <footer class="footer-tudo">
