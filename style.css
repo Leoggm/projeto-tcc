@@ -189,12 +189,7 @@ width: 100%;
 
 }
 @media screen and (max-width: 730px) {
-
-  .FeedbackContainer input[type="text"], input[type="email"] {
-   
-    width: 100px;
-    font-size: 14px;
-    }
+  
 .scrollTop {
   display: none;
 }
@@ -1109,7 +1104,7 @@ border: 2px solid #c66e02;
   justify-content: center;
   flex: 1 0 10%;
   margin: 10%;
-  height: 350px;
+  height: 400px;
   background-color: #dddddd85;
   border-radius: 500px 500px 500px 500px;
   font-size: 14px;
