@@ -1083,3 +1083,78 @@ border: 2px solid #c66e02;
   
 }
 
+.ta {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.bom {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.FeedbackContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  flex: 1 0 10%;
+  margin: 10%;
+  height: 350px;
+  background-color: #dddddd85;
+  border-radius: 500px 500px 500px 500px;
+  font-size: 14px;
+}
+
+.FeedbackContainer h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.satisfa {
+  text-align: left;
+}
+
+.FeedbackContainer input[type="text"], input[type="email"] {
+  display: block;
+  text-decoration: none;
+  border-color: #eaedff50;
+  transition: all 0.3s ease-in;
+  background-color: white;
+  color: black;
+  text-align: center;
+  border-radius: 20px;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 3px;
+}
+
+.FeedbackContainer input[type="radio"] {
+  margin-right: 10px;
+}
+
+#mensagemSucesso {
+  margin-top: 20px;
+  padding: 10px;
+  color: #00fc3b;
+  border: 1px solid #c3e6cb;
+  border-radius: 5px;
+  display: none;
+}
+
+#mensagemErro {
+  margin-top: 20px;
+  padding: 10px;
+  color: #ff0019;
+  border: 1px solid #f5c6cb;
+  border-radius: 5px;
+  display: none;
+}
+
+.oculto {
+  display: none;
+}

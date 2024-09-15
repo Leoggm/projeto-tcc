@@ -417,3 +417,47 @@ function showRecommendation(doenca) {
   document.getElementById("imag3").src = didi;
   }
   
+
+  
+  document.getElementById('feedbackForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Previne o comportamento padrão de redirecionamento
+  
+    // Captura os valores do formulário
+    const nome = encodeURIComponent(document.getElementById('nome').value);
+    const email = encodeURIComponent(document.getElementById('email').value);
+    const satisfacao = encodeURIComponent(document.querySelector('input[name="satisfacao"]:checked').value);
+  
+    // Cria uma URL de envio para o Google Forms
+    const formUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSewi6p0Cn68kmbuOK-1AuSuaEvBcR6rbovCYjs76o8yPZkpjQ/formResponse';
+    const queryString = `?entry.1269783042=${nome}&entry.2060248135=${email}&entry.1812151574=${satisfacao}`;
+  
+    // Envia os dados usando fetch() com no-cors para evitar CORS
+    fetch(formUrl + queryString, {
+        method: 'POST',
+        mode: 'no-cors'
+    })
+    .then(() => {
+        // Sucesso: Exibe uma mensagem de sucesso e limpa o formulário
+        document.getElementById('mensagemSucesso').style.display = 'block';
+        document.getElementById('mensagemErro').style.display = 'none';
+        document.getElementById('feedbackForm').reset();
+    })
+    .catch(() => {
+        // Erro: Exibe uma mensagem de erro
+        document.getElementById('mensagemSucesso').style.display = 'none';
+        document.getElementById('mensagemErro').style.display = 'block';
+    });
+    const openFeed = document.getElementById("open-feed");
+const modalContainerFeed = document.getElementById("modal_container_feed");
+const closeFeed = document.getElementById("close-feed");
+
+openFeed.addEventListener("click", () => {
+  modalContainerFeed.classList.add("show");
+});
+
+closeFeed.addEventListener("click", () => {
+  modalContainerFeed.classList.remove("show");
+});
+  });
+  
+
