@@ -1,4 +1,4 @@
-/*Peso Estimado*/
+/*RCQ*/
 
 document.getElementById("rcq-form").addEventListener("submit", async (event) => {
   event.preventDefault();
