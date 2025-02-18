@@ -216,56 +216,56 @@ function exibir() {
   }
 }
 document
-  .querySelector(".nav-item a.nav-link#bct")
+  .querySelector(".nav-item a.nav-link#tab1")
   .addEventListener("click", (e) => {
     e.preventDefault();
     const targetSection = document.querySelector("#squares");
     targetSection.scrollIntoView({ behavior: "smooth" });
   });
 document
-  .querySelector(".mobile-menu a.nav-menu#bct2")
+  .querySelector(".mobile-menu a.nav-menu#tab2")
   .addEventListener("click", (e) => {
     e.preventDefault();
     const targetSection = document.querySelector("#squares");
     targetSection.scrollIntoView({ behavior: "smooth" });
   });
 document
-  .querySelector(".nav-item a.nav-link#bct3")
+  .querySelector(".nav-item a.nav-link#tab3")
   .addEventListener("click", (e) => {
     e.preventDefault();
     const targetSection = document.querySelector("#recomendada");
     targetSection.scrollIntoView({ behavior: "smooth" });
   });
 document
-  .querySelector(".mobile-menu a.nav-menu#bct4")
+  .querySelector(".mobile-menu a.nav-menu#tab4")
   .addEventListener("click", (e) => {
     e.preventDefault();
     const targetSection = document.querySelector("#recomendada");
     targetSection.scrollIntoView({ behavior: "smooth" });
   });
 document
-  .querySelector(".nav-item a.nav-link#bct5")
+  .querySelector(".nav-item a.nav-link#tab5")
   .addEventListener("click", (e) => {
     e.preventDefault();
     const targetSection = document.querySelector("#estim");
     targetSection.scrollIntoView({ behavior: "smooth" });
   });
 document
-  .querySelector(".mobile-menu a.nav-menu#bct6")
+  .querySelector(".mobile-menu a.nav-menu#tab6")
   .addEventListener("click", (e) => {
     e.preventDefault();
     const targetSection = document.querySelector("#estim");
     targetSection.scrollIntoView({ behavior: "smooth" });
   });
 document
-  .querySelector(".nav-item a.nav-link#bct7")
+  .querySelector(".nav-item a.nav-link#tab7")
   .addEventListener("click", (e) => {
     e.preventDefault();
     const targetSection = document.querySelector("#tmb");
     targetSection.scrollIntoView({ behavior: "smooth" });
   });
 document
-  .querySelector(".mobile-menu a.nav-menu#bct8")
+  .querySelector(".mobile-menu a.nav-menu#tab8")
   .addEventListener("click", (e) => {
     e.preventDefault();
     const targetSection = document.querySelector("#tmb");
